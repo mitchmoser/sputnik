@@ -20,6 +20,8 @@ Until then, it is possible to try this extension out by:
 - Select `Load Temporary Add-on...`
 - Choose the `manifest.json` file
 
+![](icons/add-on.png?raw=true)
+
 # OSINT Resources
 
 The following OSINT resources have been implemented for each artifact type:
