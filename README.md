@@ -21,6 +21,7 @@ Until then, it is possible to try this extension out by:
 - Choose the `manifest.json` file
 
 ![](icons/add-on.png?raw=true)
+![](icons/demo.png?raw=true)
 
 # OSINT Resources
 
