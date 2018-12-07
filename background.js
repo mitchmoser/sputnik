@@ -44,6 +44,15 @@ browser.contextMenus.create({
 });
 
 browser.contextMenus.create({
+    id: "Onyphe IP",
+    title: "Onyphe",
+    contexts: ["selection"],
+    icons: {
+        "48": "icons/onyphe_48.png"
+    }
+});
+
+browser.contextMenus.create({
     id: "Shodan IP",
     title: "Shodan",
     contexts: ["selection"],
@@ -58,6 +67,15 @@ browser.contextMenus.create({
     contexts: ["selection"],
     icons: {
         "48": "icons/talos_48.png"
+    }
+});
+
+browser.contextMenus.create({
+    id: "ThreatCrowd IP",
+    title: "ThreatCrowd",
+    contexts: ["selection"],
+    icons: {
+        "48": "icons/threatcrowd_48.png"
     }
 });
 
@@ -112,6 +130,15 @@ browser.contextMenus.create({
 });
 
 browser.contextMenus.create({
+    id: "Onyphe Domain",
+    title: "Onyphe",
+    contexts: ["selection"],
+    icons: {
+        "48": "icons/onyphe_48.png"
+    }
+});
+
+browser.contextMenus.create({
     id: "Shodan Domain",
     title: "Shodan",
     contexts: ["selection"],
@@ -126,6 +153,15 @@ browser.contextMenus.create({
     contexts: ["selection"],
     icons: {
         "48": "icons/talos_48.png"
+    }
+});
+
+browser.contextMenus.create({
+    id: "ThreatCrowd Domain",
+    title: "ThreatCrowd",
+    contexts: ["selection"],
+    icons: {
+        "48": "icons/threatcrowd_48.png"
     }
 });
 
@@ -257,6 +293,15 @@ browser.contextMenus.create({
 });
 
 browser.contextMenus.create({
+    id: "X-Force URL",
+    title: "X-Force",
+    contexts: ["selection"],
+    icons: {
+        "48": "icons/xforce_48.png"
+    }
+});
+
+browser.contextMenus.create({
     id: "zscaler",
     title: "Zscaler",
     contexts: ["selection"],
@@ -264,7 +309,6 @@ browser.contextMenus.create({
         "48": "icons/zscaler_48.png"
     }
 });
-
 
 // create empty url variable
 var url = ""
@@ -295,11 +339,17 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
             case "IPVoid IP":
                 url = "http://www.ipvoid.com/";
                 break;
+            case "Onyphe IP":
+                url = "https://www.onyphe.io/search/?query="+info.selectionText;
+                break;
             case "Shodan IP":
                 url = "https://www.shodan.io/host/"+info.selectionText;
                 break;
-            case "Talos":
+            case "Talos IP":
                 url = "https://talosintelligence.com/reputation_center/lookup?search="+info.selectionText;
+                break;
+            case "ThreatCrowd IP":
+                url = "https://www.threatcrowd.org/pivot.php?data="+info.selectionText;
                 break;
             case "VT IP":
                 url = "https://www.virustotal.com/#/ip-address/"+info.selectionText;
@@ -316,11 +366,17 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
             case "Censys Domain":
                 url = "https://censys.io/domain?q="+info.selectionText;
                 break;
+            case "Onyphe Domain":
+                url = "https://www.onyphe.io/search/?query="+info.selectionText;
+                break;
             case "Shodan Domain":
                 url = "https://www.shodan.io/search?query="+info.selectionText;
                 break;
             case "Talos Domain":
                 url = "https://talosintelligence.com/reputation_center/lookup?search="+info.selectionText;
+                break;
+            case "ThreatCrowd Domain":
+                url = "https://www.threatcrowd.org/pivot.php?data="+info.selectionText;
                 break;
             case "VT Domain":
                 url = "https://virustotal.com/#/domain/"+info.selectionText;
@@ -353,13 +409,16 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
                 url = "https://app.any.run/";
                 break;
             case "BlueCoat URL":
-                url = "http://sitereview.bluecoat.com/#/lookup-result/"+info.selectionText;
+                url = "http://sitereview.bluecoat.com/#/lookup-result/";
                 break;
             case "urlscan":
                 url = "https://urlscan.io/";
                 break;
             case "VT URL":
                 url = "https://www.virustotal.com/#/home/url";
+                break;
+            case "X-Force URL":
+                url = "https://exchange.xforce.ibmcloud.com/url/"+info.selectionText
                 break;
             case "zscaler":
                 url = "https://zulu.zscaler.com/";
