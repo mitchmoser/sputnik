@@ -16,7 +16,7 @@ Sputnik is an extension to quickly and easily search IPs, Domains, File Hashes, 
 After some initial testing & feedback, this will be published as a signed extension through Mozilla.
 Until then, it is possible to try this extension out by:
 - Downloading this repository
-- Navigating to [about:debugging] in Firefox
+- Navigating to [about:debugging](about:debugging) in Firefox
 - Select `Load Temporary Add-on...`
 - Choose the `manifest.json` file
 
