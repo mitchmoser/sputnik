@@ -11,16 +11,10 @@ Sputnik is an extension to quickly and easily search IPs, Domains, File Hashes, 
     - The artifact you highlighted will be saved to your clipboard
     - You will be directed to the submission page
 
-## Quick & Dirty Install
+## Install
+![](screenshots/firefox.png?raw=true)
+Available at [Mozilla Add-Ons](https://addons.mozilla.org/en-US/firefox/addon/sputnik-osint/)
 
-After some initial testing & feedback, this will be published as a signed extension through Mozilla.
-Until then, it is possible to try this extension out by:
-- Downloading this repository
-- Navigating to [about:debugging](about:debugging) in Firefox
-- Select `Load Temporary Add-on...`
-- Choose the `manifest.json` file
-
-![](screenshots/add-on.png?raw=true)
 ![](screenshots/demo.png?raw=true)
 
 # OSINT Resources
