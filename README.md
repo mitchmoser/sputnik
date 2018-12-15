@@ -13,7 +13,8 @@ Sputnik is an extension to quickly and easily search IPs, Domains, File Hashes, 
 
 ## Install
 ![](screenshots/firefox.png?raw=true)
-Available at [Mozilla Add-Ons](https://addons.mozilla.org/en-US/firefox/addon/sputnik-osint/)
+
+Available through [Mozilla](https://addons.mozilla.org/en-US/firefox/addon/sputnik-osint/)
 
 ![](screenshots/demo.png?raw=true)
 
