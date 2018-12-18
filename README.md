@@ -1,5 +1,5 @@
-![](icons/logo_48.png?raw=true)
-# Sputnik OSINT Firefox Extension
+![](firefox/icons/logo_48.png?raw=true)
+# Sputnik OSINT Extension
 
 Sputnik is an extension to quickly and easily search IPs, Domains, File Hashes, and URLs using free Open Source Intelligence (OSINT) resources.
 
@@ -11,12 +11,18 @@ Sputnik is an extension to quickly and easily search IPs, Domains, File Hashes, 
     - The artifact you highlighted will be saved to your clipboard
     - You will be directed to the submission page
 
-## Install
+## Firefox
 ![](screenshots/firefox.png?raw=true)
 
 Available through [Mozilla](https://addons.mozilla.org/en-US/firefox/addon/sputnik-osint/)
 
-![](screenshots/demo.png?raw=true)
+![](screenshots/sputnik-firefox.png?raw=true)
+
+## Chrome
+![](screenshots/chrome.png?raw=true)
+
+Available through [Chrome Web Store](https://chrome.google.com/webstore/detail/sputnik/manapjdamopgbpimgojkccikaabhmocd)
+![](screenshots/sputnik-chrome.png?raw=true)
 
 # OSINT Resources
 
