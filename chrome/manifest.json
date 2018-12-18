@@ -1,0 +1,20 @@
+{
+    "manifest_version": 2,
+    "name": "Sputnik",
+    "description": "OSINT web extension",
+    "version": "1.0",
+    "icons": {
+        "48": "icons/logo_48.png",
+        "128": "icons/logo_128.png"
+    },
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "permissions": [
+        "clipboardWrite",
+        "contextMenus",
+        "tabs",
+        "background"
+    ]
+}
