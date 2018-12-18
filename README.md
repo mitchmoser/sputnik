@@ -5,7 +5,7 @@ Sputnik is an extension to quickly and easily search IPs, Domains, File Hashes, 
 
 ## Usage
 - Highlight the artifact you wish to search
-- Select the OSINT tool you want to use
+- Right click to select an OSINT tool to use
   - In most cases, you will be redirected straight to results
   - For tools that require user interaction such as captchas:
     - The artifact you highlighted will be saved to your clipboard
