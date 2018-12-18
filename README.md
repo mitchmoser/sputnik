@@ -20,6 +20,7 @@ Available through [Mozilla](https://addons.mozilla.org/en-US/firefox/addon/sputn
 
 ## Chrome
 ![](screenshots/chrome.png?raw=true)
+
 Available through [Chrome Web Store](https://chrome.google.com/webstore/detail/sputnik/manapjdamopgbpimgojkccikaabhmocd)
 ![](screenshots/sputnik-chrome.png?raw=true)
 
