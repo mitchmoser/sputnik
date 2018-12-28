@@ -366,22 +366,22 @@ browser.contextMenus.create({
 });
 
 browser.contextMenus.create({
-    id: "FortiGuard URL",
-    title: "FortiGuard",
-    contexts: ["selection"],
-    parentId: "URL",
-    icons: {
-        "48": "icons/fortiguard_48.png"
-    }
-});
-
-browser.contextMenus.create({
     id: "HackerTarget",
     title: "Extract Links",
     contexts: ["selection"],
     parentId: "URL",
     icons: {
         "48": "icons/hackertarget_48.png"
+    }
+});
+
+browser.contextMenus.create({
+    id: "FortiGuard URL",
+    title: "FortiGuard",
+    contexts: ["selection"],
+    parentId: "URL",
+    icons: {
+        "48": "icons/fortiguard_48.png"
     }
 });
 
@@ -503,11 +503,11 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
             case "FortiGuard Domain":
                 url = "http://fortiguard.com/search?q="+info.selectionText+"&engine=1";
                 break;
+            case "HackerTarget":
+                url = "https://hackertarget.com/extract-links/";
+                break;
             case "MX Toolbox Domain":
                 url = "https://mxtoolbox.com/SuperTool.aspx?action=mx%3a"+info.selectionText+"&run=toolpage";
-                break;
-            case "Shodan Domain":
-                url = "https://www.shodan.io/search?query="+info.selectionText;
                 break;
             case "Onyphe Domain":
                 url = "https://www.onyphe.io/search/?query="+info.selectionText;

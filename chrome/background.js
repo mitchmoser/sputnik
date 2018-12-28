@@ -23,6 +23,13 @@ chrome.contextMenus.create({
 });
 
 chrome.contextMenus.create({
+    "id": "Fortiguard IP",
+    "title": "Fortiguard",
+    "parentId": "IP",
+    "contexts": ["selection"]
+});
+
+chrome.contextMenus.create({
     "id": "GreyNoise IP",
     "title": "GreyNoise",
     "parentId": "IP",
@@ -44,6 +51,13 @@ chrome.contextMenus.create({
 });
 
 chrome.contextMenus.create({
+    "id": "Pulsedive IP",
+    "title": "Pulsedive",
+    "parentId": "IP",
+    "contexts": ["selection"]
+});
+
+chrome.contextMenus.create({
     "id": "Shodan IP",
     "title": "Shodan",
     "parentId": "IP",
@@ -60,6 +74,13 @@ chrome.contextMenus.create({
 chrome.contextMenus.create({
     "id": "ThreatCrowd IP",
     "title": "ThreatCrowd",
+    "parentId": "IP",
+    "contexts": ["selection"]
+});
+
+chrome.contextMenus.create({
+    "id": "ThreatMiner IP",
+    "title": "ThreatMiner",
     "parentId": "IP",
     "contexts": ["selection"]
 });
@@ -102,8 +123,29 @@ chrome.contextMenus.create({
 });
 
 chrome.contextMenus.create({
+    "id": "FortiGuard Domain",
+    "title": "FortiGuard",
+    "parentId": "Domain",
+    "contexts": ["selection"]
+});
+
+chrome.contextMenus.create({
+    "id": "MX Toolbox Domain",
+    "title": "MX Toolbox",
+    "parentId": "Domain",
+    "contexts": ["selection"]
+});
+
+chrome.contextMenus.create({
     "id": "Onyphe Domain",
     "title": "Onyphe",
+    "parentId": "Domain",
+    "contexts": ["selection"]
+});
+
+chrome.contextMenus.create({
+    "id": "Pulsedive Domain",
+    "title": "Pulsedive",
     "parentId": "Domain",
     "contexts": ["selection"]
 });
@@ -125,6 +167,13 @@ chrome.contextMenus.create({
 chrome.contextMenus.create({
     "id": "ThreatCrowd Domain",
     "title": "ThreatCrowd",
+    "parentId": "Domain",
+    "contexts": ["selection"]
+});
+
+chrome.contextMenus.create({
+    "id": "ThreatMiner Domain",
+    "title": "ThreatMiner",
     "parentId": "Domain",
     "contexts": ["selection"]
 });
@@ -174,6 +223,13 @@ chrome.contextMenus.create({
 });
 
 chrome.contextMenus.create({
+    "id": "ThreatMiner Hash",
+    "title": "ThreatMiner",
+    "parentId": "Hash",
+    "contexts": ["selection"]
+});
+
+chrome.contextMenus.create({
     "id": "VT Hash",
     "title": "VirusTotal",
     "parentId": "Hash",
@@ -206,6 +262,27 @@ chrome.contextMenus.create({
 chrome.contextMenus.create({
     "id": "BlueCoat URL",
     "title": "BlueCoat",
+    "parentId": "URL",
+    "contexts": ["selection"]
+});
+
+chrome.contextMenus.create({
+    "id": "HackerTarget",
+    "title": "Extract Links",
+    "parentId": "URL",
+    "contexts": ["selection"]
+});
+
+chrome.contextMenus.create({
+    "id": "FortiGuard URL",
+    "title": "FortiGuard",
+    "parentId": "URL",
+    "contexts": ["selection"]
+});
+
+chrome.contextMenus.create({
+    "id": "TrendMicro",
+    "title": "TrendMicro",
     "parentId": "URL",
     "contexts": ["selection"]
 });
@@ -281,6 +358,9 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
             case "Censys IP":
                 url = "https://censys.io/ipv4/"+info.selectionText;
                 break;
+            case "FortiGuard IP":
+                url = "http://fortiguard.com/search?q="+info.selectionText+"&engine=8";
+                break;
             case "GreyNoise IP":
                 url = "https://viz.greynoise.io/ip/"+info.selectionText;
                 break;
@@ -290,6 +370,9 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
             case "Onyphe IP":
                 url = "https://www.onyphe.io/search/?query="+info.selectionText;
                 break;
+            case "Pulsedive IP":
+                url = "https://pulsedive.com/indicator/?ioc="+window.btoa(info.selectionText); // btoa() = base64 encode
+                break;
             case "Shodan IP":
                 url = "https://www.shodan.io/host/"+info.selectionText;
                 break;
@@ -298,6 +381,9 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 break;
             case "ThreatCrowd IP":
                 url = "https://www.threatcrowd.org/pivot.php?data="+info.selectionText;
+                break;
+            case "ThreatMiner IP":
+                url = "https://www.threatminer.org/host.php?q="+info.selectionText;
                 break;
             case "VT IP":
                 url = "https://www.virustotal.com/#/ip-address/"+info.selectionText;
@@ -314,8 +400,17 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
             case "Censys Domain":
                 url = "https://censys.io/domain?q="+info.selectionText;
                 break;
+            case "FortiGuard Domain":
+                url = "http://fortiguard.com/search?q="+info.selectionText+"&engine=1";
+                break;
+            case "MX Toolbox Domain":
+                url = "https://mxtoolbox.com/SuperTool.aspx?action=mx%3a"+info.selectionText+"&run=toolpage";
+                break;
             case "Onyphe Domain":
                 url = "https://www.onyphe.io/search/?query="+info.selectionText;
+                break;
+            case "Pulsedive Domain":
+                url = "https://pulsedive.com/indicator/?ioc="+window.btoa(info.selectionText); // btoa() = base64 encode
                 break;
             case "Shodan Domain":
                 url = "https://www.shodan.io/search?query="+info.selectionText;
@@ -325,6 +420,9 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 break;
             case "ThreatCrowd Domain":
                 url = "https://www.threatcrowd.org/pivot.php?data="+info.selectionText;
+                break;
+            case "ThreatMiner Domain":
+                url = "https://www.threatminer.org/domain.php?q="+info.selectionText;
                 break;
             case "VT Domain":
                 url = "https://virustotal.com/#/domain/"+info.selectionText;
@@ -344,6 +442,9 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
             case "Talos Hash":
                 url = "https://talosintelligence.com/talos_file_reputation"
                 break;
+            case "ThreatMiner Hash":
+                url = "https://www.threatminer.org/sample.php?q="+info.selectionText;
+                break;
             case "VT Hash":
                 url = "https://www.virustotal.com/#/file/"+info.selectionText;
                 break;
@@ -358,6 +459,15 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 break;
             case "BlueCoat URL":
                 url = "http://sitereview.bluecoat.com/#/lookup-result/";
+                break;
+            case "FortiGuard URL":
+                url = "http://fortiguard.com/search?q="+info.selectionText+"&engine=7";
+                break;
+            case "HackerTarget":
+                url = "https://hackertarget.com/extract-links/";
+                break;
+            case "TrendMicro URL":
+                url = "https://global.sitesafety.trendmicro.com/";
                 break;
             case "urlscan":
                 url = "https://urlscan.io/";
