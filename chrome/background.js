@@ -23,8 +23,8 @@ chrome.contextMenus.create({
 });
 
 chrome.contextMenus.create({
-    "id": "Fortiguard IP",
-    "title": "Fortiguard",
+    "id": "FortiGuard IP",
+    "title": "FortiGuard",
     "parentId": "IP",
     "contexts": ["selection"]
 });
