@@ -46,6 +46,7 @@ The following OSINT resources have been implemented for each artifact type:
 
 ## Domain
 - [Alexa](https://www.alexa.com/siteinfo)
+- [BlueCoat](http://sitereview.bluecoat.com/#/)
 - [Censys](https://censys.io/)
 - [FortiGuard](http://fortiguard.com/)
 - [MX Toolbox](https://mxtoolbox.com/)

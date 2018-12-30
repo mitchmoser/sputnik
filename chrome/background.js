@@ -123,6 +123,13 @@ chrome.contextMenus.create({
 });
 
 chrome.contextMenus.create({
+    "id": "BlueCoat Domain",
+    "title": "BlueCoat",
+    "parentId": "Domain",
+    "contexts": ["selection"]
+});
+
+chrome.contextMenus.create({
     "id": "Censys Domain",
     "title": "Censys",
     "parentId": "Domain",
@@ -413,6 +420,9 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
              */
             case "Alexa Domain":
                 url = "https://www.alexa.com/siteinfo/"+info.selectionText;
+                break;
+            case "BlueCoat Domain":
+                url = "http://sitereview.bluecoat.com/#/lookup-result/"+info.selectionText;
                 break;
             case "Censys Domain":
                 url = "https://censys.io/domain?q="+info.selectionText;

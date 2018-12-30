@@ -168,6 +168,16 @@ browser.contextMenus.create({
 });
 
 browser.contextMenus.create({
+    id: "BlueCoat Domain",
+    title: "BlueCoat",
+    contexts: ["selection"],
+    parentId: "Domain",
+    icons: {
+        "48": "icons/bluecoat_48.png"
+    }
+});
+
+browser.contextMenus.create({
     id: "Censys Domain",
     title: "Censys",
     contexts: ["selection"],
@@ -519,6 +529,9 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
              */
             case "Alexa Domain":
                 url = "https://www.alexa.com/siteinfo/"+info.selectionText;
+                break;
+            case "BlueCoat Domain":
+                url = "http://sitereview.bluecoat.com/#/lookup-result/"+info.selectionText;
                 break;
             case "Censys Domain":
                 url = "https://censys.io/domain?q="+info.selectionText;
