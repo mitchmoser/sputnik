@@ -58,6 +58,13 @@ chrome.contextMenus.create({
 });
 
 chrome.contextMenus.create({
+    "id": "SecurityTrails IP",
+    "title": "SecurityTrails",
+    "parentId": "IP",
+    "contexts": ["selection"]
+});
+
+chrome.contextMenus.create({
     "id": "Shodan IP",
     "title": "Shodan",
     "parentId": "IP",
@@ -146,6 +153,13 @@ chrome.contextMenus.create({
 chrome.contextMenus.create({
     "id": "Pulsedive Domain",
     "title": "Pulsedive",
+    "parentId": "Domain",
+    "contexts": ["selection"]
+});
+
+chrome.contextMenus.create({
+    "id": "SecurityTrails Domain",
+    "title": "SecurityTrails",
     "parentId": "Domain",
     "contexts": ["selection"]
 });
@@ -373,6 +387,9 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
             case "Pulsedive IP":
                 url = "https://pulsedive.com/indicator/?ioc="+window.btoa(info.selectionText); // btoa() = base64 encode
                 break;
+            case "SecurityTrails IP":
+                url = "https://securitytrails.com/search/domain/"+info.selectionText;
+                break;
             case "Shodan IP":
                 url = "https://www.shodan.io/host/"+info.selectionText;
                 break;
@@ -411,6 +428,9 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 break;
             case "Pulsedive Domain":
                 url = "https://pulsedive.com/indicator/?ioc="+window.btoa(info.selectionText); // btoa() = base64 encode
+                break;
+            case "SecurityTrails Domain":
+                url = "https://securitytrails.com/search/domain/"+info.selectionText;
                 break;
             case "Shodan Domain":
                 url = "https://www.shodan.io/search?query="+info.selectionText;
