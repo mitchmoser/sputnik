@@ -30,6 +30,7 @@ The following OSINT resources have been implemented for each artifact type:
 
 ## IP
 - [AlienVault OTX](https://otx.alienvault.com/)
+- [Bad Packets](https://badpackets.net/)
 - [Censys](https://censys.io/)
 - [FortiGuard](http://fortiguard.com/)
 - [GreyNoise](https://greynoise.io/)
