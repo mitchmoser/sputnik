@@ -378,10 +378,10 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
         var artifact = String(info.selectionText).trim()
     } else if (info.linkUrl) {
         var artifact = new URL(info.linkUrl)
-        artifact = domain.host;
+        artifact = artifact.host;
     } else if (info.srcUrl) {
         var artifact = new URL(info.srcUrl)
-        artifact = domain.host;
+        artifact = artifact.host;
     }
     // copy the selection to clipboard
     copyStringToClipboard(artifact);
