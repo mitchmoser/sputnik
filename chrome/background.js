@@ -366,120 +366,122 @@ function copyStringToClipboard(str) {
  * given the ID of the menu item that was clicked
  */
 chrome.contextMenus.onClicked.addListener((info, tab) => {
+    // strip leading and trailing spaces
+    var artifact = String(info.selectionText).trim()
     // copy the selection to clipboard
-    copyStringToClipboard(info.selectionText);
+    copyStringToClipboard(artifact);
 
     switch (info.menuItemId) {
             /*
              * IPs
              */
             case "Alien IP":
-                url = "https://otx.alienvault.com/indicator/ip/"+info.selectionText;
+                url = "https://otx.alienvault.com/indicator/ip/"+artifact;
                 break;
             case "Censys IP":
-                url = "https://censys.io/ipv4/"+info.selectionText;
+                url = "https://censys.io/ipv4/"+artifact;
                 break;
             case "FortiGuard IP":
-                url = "http://fortiguard.com/search?q="+info.selectionText+"&engine=8";
+                url = "http://fortiguard.com/search?q="+artifact+"&engine=8";
                 break;
             case "GreyNoise IP":
-                url = "https://viz.greynoise.io/ip/"+info.selectionText;
+                url = "https://viz.greynoise.io/ip/"+artifact;
                 break;
             case "IPVoid IP":
                 url = "http://www.ipvoid.com/";
                 break;
             case "Onyphe IP":
-                url = "https://www.onyphe.io/search/?query="+info.selectionText;
+                url = "https://www.onyphe.io/search/?query="+artifact;
                 break;
             case "Pulsedive IP":
-                url = "https://pulsedive.com/indicator/?ioc="+window.btoa(info.selectionText); // btoa() = base64 encode
+                url = "https://pulsedive.com/indicator/?ioc="+window.btoa(artifact); // btoa() = base64 encode
                 break;
             case "SecurityTrails IP":
-                url = "https://securitytrails.com/search/domain/"+info.selectionText;
+                url = "https://securitytrails.com/search/domain/"+artifact;
                 break;
             case "Shodan IP":
-                url = "https://www.shodan.io/host/"+info.selectionText;
+                url = "https://www.shodan.io/host/"+artifact;
                 break;
             case "Talos IP":
-                url = "https://talosintelligence.com/reputation_center/lookup?search="+info.selectionText;
+                url = "https://talosintelligence.com/reputation_center/lookup?search="+artifact;
                 break;
             case "ThreatCrowd IP":
-                url = "https://www.threatcrowd.org/pivot.php?data="+info.selectionText;
+                url = "https://www.threatcrowd.org/pivot.php?data="+artifact;
                 break;
             case "ThreatMiner IP":
-                url = "https://www.threatminer.org/host.php?q="+info.selectionText;
+                url = "https://www.threatminer.org/host.php?q="+artifact;
                 break;
             case "VT IP":
-                url = "https://www.virustotal.com/#/ip-address/"+info.selectionText;
+                url = "https://www.virustotal.com/#/ip-address/"+artifact;
                 break;
             case "X-Force IP":
-                url = "https://exchange.xforce.ibmcloud.com/ip/"+info.selectionText;
+                url = "https://exchange.xforce.ibmcloud.com/ip/"+artifact;
                 break;
             /*
              * Domains
              */
             case "Alexa Domain":
-                url = "https://www.alexa.com/siteinfo/"+info.selectionText;
+                url = "https://www.alexa.com/siteinfo/"+artifact;
                 break;
             case "BlueCoat Domain":
-                url = "http://sitereview.bluecoat.com/#/lookup-result/"+info.selectionText;
+                url = "http://sitereview.bluecoat.com/#/lookup-result/"+artifact;
                 break;
             case "Censys Domain":
-                url = "https://censys.io/domain?q="+info.selectionText;
+                url = "https://censys.io/domain?q="+artifact;
                 break;
             case "FortiGuard Domain":
-                url = "http://fortiguard.com/search?q="+info.selectionText+"&engine=1";
+                url = "http://fortiguard.com/search?q="+artifact+"&engine=1";
                 break;
             case "MX Toolbox Domain":
-                url = "https://mxtoolbox.com/SuperTool.aspx?action=mx%3a"+info.selectionText+"&run=toolpage";
+                url = "https://mxtoolbox.com/SuperTool.aspx?action=mx%3a"+artifact+"&run=toolpage";
                 break;
             case "Onyphe Domain":
-                url = "https://www.onyphe.io/search/?query="+info.selectionText;
+                url = "https://www.onyphe.io/search/?query="+artifact;
                 break;
             case "Pulsedive Domain":
-                url = "https://pulsedive.com/indicator/?ioc="+window.btoa(info.selectionText); // btoa() = base64 encode
+                url = "https://pulsedive.com/indicator/?ioc="+window.btoa(artifact); // btoa() = base64 encode
                 break;
             case "SecurityTrails Domain":
-                url = "https://securitytrails.com/search/domain/"+info.selectionText;
+                url = "https://securitytrails.com/search/domain/"+artifact;
                 break;
             case "Shodan Domain":
-                url = "https://www.shodan.io/search?query="+info.selectionText;
+                url = "https://www.shodan.io/search?query="+artifact;
                 break;
             case "Talos Domain":
-                url = "https://talosintelligence.com/reputation_center/lookup?search="+info.selectionText;
+                url = "https://talosintelligence.com/reputation_center/lookup?search="+artifact;
                 break;
             case "ThreatCrowd Domain":
-                url = "https://www.threatcrowd.org/pivot.php?data="+info.selectionText;
+                url = "https://www.threatcrowd.org/pivot.php?data="+artifact;
                 break;
             case "ThreatMiner Domain":
-                url = "https://www.threatminer.org/domain.php?q="+info.selectionText;
+                url = "https://www.threatminer.org/domain.php?q="+artifact;
                 break;
             case "VT Domain":
-                url = "https://virustotal.com/#/domain/"+info.selectionText;
+                url = "https://virustotal.com/#/domain/"+artifact;
                 break;
             case "X-Force Domain":
-                url = "https://exchange.xforce.ibmcloud.com/url/"+info.selectionText
+                url = "https://exchange.xforce.ibmcloud.com/url/"+artifact
                 break;
             /*
              * Hashes
              */
             case "Alien Hash":
-                url = "https://otx.alienvault.com/indicator/file/"+info.selectionText;
+                url = "https://otx.alienvault.com/indicator/file/"+artifact;
                 break;
             case "Hybrid Hash":
-                url = "https://www.hybrid-analysis.com/search?query="+info.selectionText;
+                url = "https://www.hybrid-analysis.com/search?query="+artifact;
                 break;
             case "Talos Hash":
                 url = "https://talosintelligence.com/talos_file_reputation"
                 break;
             case "ThreatMiner Hash":
-                url = "https://www.threatminer.org/sample.php?q="+info.selectionText;
+                url = "https://www.threatminer.org/sample.php?q="+artifact;
                 break;
             case "VT Hash":
-                url = "https://www.virustotal.com/#/file/"+info.selectionText;
+                url = "https://www.virustotal.com/#/file/"+artifact;
                 break;
             case "X-Force Hash":
-                url = "https://exchange.xforce.ibmcloud.com/malware/"+info.selectionText;
+                url = "https://exchange.xforce.ibmcloud.com/malware/"+artifact;
                 break;
             /*
              * URLs
@@ -491,7 +493,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 url = "http://sitereview.bluecoat.com/#/lookup-result/";
                 break;
             case "FortiGuard URL":
-                url = "http://fortiguard.com/search?q="+info.selectionText+"&engine=7";
+                url = "http://fortiguard.com/search?q="+artifact+"&engine=7";
                 break;
             case "HackerTarget":
                 url = "https://hackertarget.com/extract-links/";
@@ -506,7 +508,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 url = "https://www.virustotal.com/#/home/url";
                 break;
             case "X-Force URL":
-                url = "https://exchange.xforce.ibmcloud.com/url/"+info.selectionText
+                url = "https://exchange.xforce.ibmcloud.com/url/"+artifact
                 break;
             case "zscaler":
                 url = "https://zulu.zscaler.com/";
