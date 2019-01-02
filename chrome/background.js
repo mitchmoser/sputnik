@@ -5,105 +5,105 @@
 chrome.contextMenus.create({
     "id": "IP",
     "title": "IP",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "Alien IP",
     "title": "AlienVault OTX",
     "parentId": "IP",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "Censys IP",
     "title": "Censys",
     "parentId": "IP",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "FortiGuard IP",
     "title": "FortiGuard",
     "parentId": "IP",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "GreyNoise IP",
     "title": "GreyNoise",
     "parentId": "IP",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "IPVoid IP",
     "title": "IPVoid",
     "parentId": "IP",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "Onyphe IP",
     "title": "Onyphe",
     "parentId": "IP",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "Pulsedive IP",
     "title": "Pulsedive",
     "parentId": "IP",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "SecurityTrails IP",
     "title": "SecurityTrails",
     "parentId": "IP",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "Shodan IP",
     "title": "Shodan",
     "parentId": "IP",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "Talos IP",
     "title": "Talos",
     "parentId": "IP",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "ThreatCrowd IP",
     "title": "ThreatCrowd",
     "parentId": "IP",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "ThreatMiner IP",
     "title": "ThreatMiner",
     "parentId": "IP",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "VT IP",
     "title": "VirusTotal",
     "parentId": "IP",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "X-Force IP",
     "title": "X-Force",
     "parentId": "IP",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 /*
@@ -112,105 +112,105 @@ chrome.contextMenus.create({
 chrome.contextMenus.create({
     "id": "Domain",
     "title": "Domain",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "Alexa Domain",
     "title": "Alexa",
     "parentId": "Domain",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "BlueCoat Domain",
     "title": "BlueCoat",
     "parentId": "Domain",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "Censys Domain",
     "title": "Censys",
     "parentId": "Domain",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "FortiGuard Domain",
     "title": "FortiGuard",
     "parentId": "Domain",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "MX Toolbox Domain",
     "title": "MX Toolbox",
     "parentId": "Domain",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "Onyphe Domain",
     "title": "Onyphe",
     "parentId": "Domain",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "Pulsedive Domain",
     "title": "Pulsedive",
     "parentId": "Domain",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "SecurityTrails Domain",
     "title": "SecurityTrails",
     "parentId": "Domain",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "Shodan Domain",
     "title": "Shodan",
     "parentId": "Domain",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "Talos Domain",
     "title": "Talos",
     "parentId": "Domain",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "ThreatCrowd Domain",
     "title": "ThreatCrowd",
     "parentId": "Domain",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "ThreatMiner Domain",
     "title": "ThreatMiner",
     "parentId": "Domain",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "VT Domain",
     "title": "VirusTotal",
     "parentId": "Domain",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "X-Force Domain",
     "title": "X-Force",
     "parentId": "Domain",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 /*
@@ -270,70 +270,70 @@ chrome.contextMenus.create({
 chrome.contextMenus.create({
     "id": "URL",
     "title": "URL",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "Any.Run",
     "title": "Any.Run",
     "parentId": "URL",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "BlueCoat URL",
     "title": "BlueCoat",
     "parentId": "URL",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "HackerTarget",
     "title": "Extract Links",
     "parentId": "URL",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "FortiGuard URL",
     "title": "FortiGuard",
     "parentId": "URL",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "TrendMicro",
     "title": "TrendMicro",
     "parentId": "URL",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "urlscan",
     "title": "urlscan",
     "parentId": "URL",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "VT URL",
     "title": "VirusTotal",
     "parentId": "URL",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "X-Force URL",
     "title": "X-Force",
     "parentId": "URL",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({
     "id": "zscaler",
     "title": "Zscaler",
     "parentId": "URL",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 // create empty url variable
@@ -366,8 +366,16 @@ function copyStringToClipboard(str) {
  * given the ID of the menu item that was clicked
  */
 chrome.contextMenus.onClicked.addListener((info, tab) => {
-    // strip leading and trailing spaces
-    var artifact = String(info.selectionText).trim()
+    // identify context type and strip leading and trailing spaces
+    if (info.selectionText) {
+        var artifact = String(info.selectionText).trim()
+    } else if (info.linkUrl) {
+        var artifact = new URL(info.linkUrl)
+        artifact = artifact.host;
+    } else if (info.srcUrl) {
+        var artifact = new URL(info.srcUrl)
+        artifact = artifact.host;
+    }
     // copy the selection to clipboard
     copyStringToClipboard(artifact);
 
