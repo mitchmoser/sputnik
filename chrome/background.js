@@ -19,7 +19,7 @@ chrome.contextMenus.create({
     "id": "Bad Packets IP",
     "title": "Bad Packets",
     "parentId": "IP",
-    "contexts": ["selection"]
+    "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
 chrome.contextMenus.create({

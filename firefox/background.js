@@ -21,7 +21,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "Bad Packets IP",
     title: "Bad Packets",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "IP",
     icons: {
         "48": ""
