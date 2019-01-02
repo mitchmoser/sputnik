@@ -16,6 +16,13 @@ chrome.contextMenus.create({
 });
 
 chrome.contextMenus.create({
+    "id": "Bad Packets IP",
+    "title": "Bad Packets",
+    "parentId": "IP",
+    "contexts": ["selection"]
+});
+
+chrome.contextMenus.create({
     "id": "Censys IP",
     "title": "Censys",
     "parentId": "IP",
@@ -377,6 +384,9 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
              */
             case "Alien IP":
                 url = "https://otx.alienvault.com/indicator/ip/"+artifact;
+                break;
+            case "Bad Packets IP":
+                url = "https://mirai.badpackets.net/?ipAddress="+artifact;
                 break;
             case "Censys IP":
                 url = "https://censys.io/ipv4/"+artifact;
