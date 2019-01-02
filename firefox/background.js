@@ -5,13 +5,13 @@
 browser.contextMenus.create({
     id: "IP",
     title: "IP",
-    contexts: ["selection"]
+    contexts: ["selection", "link", "image", "video", "audio"]
 });
 
 browser.contextMenus.create({
     id: "Alien IP",
     title: "AlienVault OTX",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "IP",
     icons: {
         "48": "icons/alien_48.png"
@@ -32,7 +32,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "Censys IP",
     title: "Censys",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "IP",
     icons: {
         "48": "icons/censys_48.png"
@@ -42,7 +42,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "FortiGuard IP",
     title: "FortiGuard",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "IP",
     icons: {
         "48": "icons/fortiguard_48.png"
@@ -52,7 +52,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "GreyNoise IP",
     title: "GreyNoise",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "IP",
     icons: {
         "48": "icons/greynoise_48.png"
@@ -62,7 +62,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "IPVoid IP",
     title: "IPVoid",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "IP",
     icons: {
         "48": "icons/ipvoid_48.png"
@@ -72,7 +72,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "Onyphe IP",
     title: "Onyphe",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "IP",
     icons: {
         "48": "icons/onyphe_48.png"
@@ -82,7 +82,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "Pulsedive IP",
     title: "Pulsedive",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "IP",
     icons: {
         "48": "icons/pulse_48.png"
@@ -92,7 +92,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "SecurityTrails IP",
     title: "SecurityTrails",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "IP",
     icons: {
         "48": "icons/securitytrails_48.png"
@@ -102,7 +102,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "Shodan IP",
     title: "Shodan",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "IP",
     icons: {
         "48": "icons/shodan_48.png"
@@ -112,7 +112,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "Talos IP",
     title: "Talos",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "IP",
     icons: {
         "48": "icons/talos_48.png"
@@ -122,7 +122,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "ThreatCrowd IP",
     title: "ThreatCrowd",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "IP",
     icons: {
         "48": "icons/threatcrowd_48.png"
@@ -132,7 +132,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "ThreatMiner IP",
     title: "ThreatMiner",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "IP",
     icons: {
         "48": "icons/threatminer_48.png"
@@ -142,7 +142,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "VT IP",
     title: "VirusTotal",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "IP",
     icons: {
         "48": "icons/vt_48.png"
@@ -152,7 +152,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "X-Force IP",
     title: "X-Force",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "IP",
     icons: {
         "48": "icons/xforce_48.png"
@@ -165,13 +165,13 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "Domain",
     title: "Domain",
-    contexts: ["selection"]
+    contexts: ["selection", "link", "image", "video", "audio"]
 });
 
 browser.contextMenus.create({
     id: "Alexa Domain",
     title: "Alexa",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "Domain",
     icons: {
         "48": "icons/alexa_48.png"
@@ -181,7 +181,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "BlueCoat Domain",
     title: "BlueCoat",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "Domain",
     icons: {
         "48": "icons/bluecoat_48.png"
@@ -191,7 +191,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "Censys Domain",
     title: "Censys",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "Domain",
     icons: {
         "48": "icons/censys_48.png"
@@ -201,7 +201,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "FortiGuard Domain",
     title: "FortiGuard",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "Domain",
     icons: {
         "48": "icons/fortiguard_48.png"
@@ -211,7 +211,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "MX Toolbox Domain",
     title: "MX Toolbox",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "Domain",
     icons: {
         "48": "icons/mxtoolbox_48.png"
@@ -221,7 +221,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "Onyphe Domain",
     title: "Onyphe",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "Domain",
     icons: {
         "48": "icons/onyphe_48.png"
@@ -231,7 +231,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "Pulsedive Domain",
     title: "Pulsedive",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "Domain",
     icons: {
         "48": "icons/pulse_48.png"
@@ -241,7 +241,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "SecurityTrails Domain",
     title: "SecurityTrails",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "Domain",
     icons: {
         "48": "icons/securitytrails_48.png"
@@ -251,7 +251,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "Shodan Domain",
     title: "Shodan",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "Domain",
     icons: {
         "48": "icons/shodan_48.png"
@@ -261,7 +261,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "Talos Domain",
     title: "Talos",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "Domain",
     icons: {
         "48": "icons/talos_48.png"
@@ -271,7 +271,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "ThreatCrowd Domain",
     title: "ThreatCrowd",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "Domain",
     icons: {
         "48": "icons/threatcrowd_48.png"
@@ -281,7 +281,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "ThreatMiner Domain",
     title: "ThreatMiner",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "Domain",
     icons: {
         "48": "icons/threatminer_48.png"
@@ -291,7 +291,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "VT Domain",
     title: "VirusTotal",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "Domain",
     icons: {
         "48": "icons/vt_48.png"
@@ -301,7 +301,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "X-Force Domain",
     title: "X-Force",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "Domain",
     icons: {
         "48": "icons/xforce_48.png"
@@ -383,13 +383,13 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "URL",
     title: "URL",
-    contexts: ["selection"]
+    contexts: ["selection", "link", "image", "video", "audio"]
 });
 
 browser.contextMenus.create({
     id: "Any.Run",
     title: "Any.Run",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "URL",
     icons: {
         "48": "icons/anyrun_48.png"
@@ -399,7 +399,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "BlueCoat URL",
     title: "BlueCoat",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "URL",
     icons: {
         "48": "icons/bluecoat_48.png"
@@ -409,7 +409,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "HackerTarget",
     title: "Extract Links",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "URL",
     icons: {
         "48": "icons/hackertarget_48.png"
@@ -419,7 +419,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "FortiGuard URL",
     title: "FortiGuard",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "URL",
     icons: {
         "48": "icons/fortiguard_48.png"
@@ -429,7 +429,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "TrendMicro URL",
     title: "TrendMicro",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "URL",
     icons: {
         "48": "icons/trendmicro_48.png"
@@ -439,7 +439,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "urlscan",
     title: "urlscan",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "URL",
     icons: {
         "48": "icons/urlscan_48.png"
@@ -449,7 +449,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "VT URL",
     title: "VirusTotal",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "URL",
     icons: {
         "48": "icons/vt_48.png"
@@ -459,7 +459,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "X-Force URL",
     title: "X-Force",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "URL",
     icons: {
         "48": "icons/xforce_48.png"
@@ -469,7 +469,7 @@ browser.contextMenus.create({
 browser.contextMenus.create({
     id: "zscaler",
     title: "Zscaler",
-    contexts: ["selection"],
+    contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "URL",
     icons: {
         "48": "icons/zscaler_48.png"
@@ -487,7 +487,15 @@ var url = ""
 
 browser.contextMenus.onClicked.addListener((info, tab) => {
     // strip leading and trailing spaces
-    var artifact = String(info.selectionText).trim()
+    if (info.selectionText) {
+        var artifact = String(info.selectionText).trim()
+    } else if (info.linkUrl) {
+        var artifact = new URL(info.linkUrl)
+        artifact = artifact.host;
+    } else if (info.srcUrl) {
+        var artifact = new URL(info.srcUrl)
+        artifact = artifact.host;
+    }
     // copy the selection to clipboard
     navigator.clipboard.writeText(artifact);
 
