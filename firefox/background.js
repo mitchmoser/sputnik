@@ -531,7 +531,7 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
                 url = "https://securitytrails.com/search/domain/"+artifact;
                 break;
             case "Shodan IP":
-                url = "https://www.shodan.io/host/"+artifact;
+                url = "https://www.shodan.io/search?query="+artifact;
                 break;
             case "Talos IP":
                 url = "https://talosintelligence.com/reputation_center/lookup?search="+artifact;
