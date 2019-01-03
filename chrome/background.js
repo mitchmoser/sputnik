@@ -9,6 +9,13 @@ chrome.contextMenus.create({
 });
 
 chrome.contextMenus.create({
+    "id": "AbuseIPDB",
+    "title": "AbuseIPDB",
+    "parentId": "IP",
+    "contexts": ["selection", "link", "image", "video", "audio"]
+});
+
+chrome.contextMenus.create({
     "id": "Alien IP",
     "title": "AlienVault OTX",
     "parentId": "IP",
@@ -390,6 +397,9 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
             /*
              * IPs
              */
+            case "AbuseIPDB":
+                url = "https://www.abuseipdb.com/check/"+artifact;
+                break;
             case "Alien IP":
                 url = "https://otx.alienvault.com/indicator/ip/"+artifact;
                 break;
