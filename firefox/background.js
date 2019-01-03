@@ -9,6 +9,16 @@ browser.contextMenus.create({
 });
 
 browser.contextMenus.create({
+    id: "AbuseIPDB",
+    title: "AbuseIPDB",
+    contexts: ["selection", "link", "image", "video", "audio"],
+    parentId: "IP",
+    icons: {
+        "48": "icons/abuseipdb_48.png"
+    }
+});
+
+browser.contextMenus.create({
     id: "Alien IP",
     title: "AlienVault OTX",
     contexts: ["selection", "link", "image", "video", "audio"],
@@ -503,6 +513,9 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
             /*
              * IPs
              */
+            case "AbuseIPDB":
+                url = "https://www.abuseipdb.com/check/"+artifact;
+                break;
             case "Alien IP":
                 url = "https://otx.alienvault.com/indicator/ip/"+artifact;
                 break;
