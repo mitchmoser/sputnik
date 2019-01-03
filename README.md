@@ -29,6 +29,7 @@ Available through [Chrome Web Store](https://chrome.google.com/webstore/detail/s
 The following OSINT resources have been implemented for each artifact type:
 
 ## IP
+- [AbuseIPDB](https://www.abuseipdb.com/)
 - [AlienVault OTX](https://otx.alienvault.com/)
 - [Bad Packets](https://badpackets.net/)
 - [Censys](https://censys.io/)
