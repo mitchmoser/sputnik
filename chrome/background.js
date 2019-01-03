@@ -488,7 +488,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 url = "https://virustotal.com/#/domain/"+artifact;
                 break;
             case "X-Force Domain":
-                url = "https://exchange.xforce.ibmcloud.com/url/"+artifact
+                url = "https://exchange.xforce.ibmcloud.com/url/"+artifact;
                 break;
             /*
              * Hashes
@@ -500,7 +500,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 url = "https://www.hybrid-analysis.com/search?query="+artifact;
                 break;
             case "Talos Hash":
-                url = "https://talosintelligence.com/talos_file_reputation"
+                url = "https://talosintelligence.com/talos_file_reputation";
                 break;
             case "ThreatMiner Hash":
                 url = "https://www.threatminer.org/sample.php?q="+artifact;
