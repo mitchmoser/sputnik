@@ -10,7 +10,7 @@
 [![](https://img.shields.io/amo/users/:addon/sputnik-osint/.svg?style=popout&logo=mozilla%20firefox)](https://addons.mozilla.org/en-US/firefox/addon/sputnik-osint/) [![](https://img.shields.io/amo/v/:addon/sputnik-osint/.svg?style=popout&logo=mozilla%20firefox&colorB=green)](https://addons.mozilla.org/en-US/firefox/addon/sputnik-osint/) [![](https://img.shields.io/amo/stars/:addon/sputnik-osint/.svg?style=popout&logo=mozilla%20firefox)](https://addons.mozilla.org/en-US/firefox/addon/sputnik-osint/)
 
 
-[![](https://img.shields.io/snyk/vulnerabilities/github/mitchmoser/sputnik.svg?style=popout&logo=javascript)](https://snyk.io/test/github/mitchmoser/sputnik?targetFile=package.json)
+[![](https://img.shields.io/snyk/vulnerabilities/github/mitchmoser/sputnik.svg?style=popout&logo=javascript)](https://snyk.io/test/github/mitchmoser/sputnik?targetFile=package.json) [![](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=popout&logo=github&logoColor=dddddd)](https://github.com/mitchmoser/sputnik/pulls)
 
 Sputnik is an extension to quickly and easily search IPs, Domains, File Hashes, and URLs using free Open Source Intelligence (OSINT) resources.
 
