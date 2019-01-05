@@ -1,11 +1,18 @@
 ![](firefox/icons/logo_48.png?raw=true)
 # Sputnik OSINT Extension
 
+[![](https://img.shields.io/chrome-web-store/users/:sputnik/manapjdamopgbpimgojkccikaabhmocd.svg?style=popout&logo=google%20chrome&logoColor=lightgrey)](https://chrome.google.com/webstore/detail/sputnik/manapjdamopgbpimgojkccikaabhmocd) [![](https://img.shields.io/chrome-web-store/v/:sputnik/manapjdamopgbpimgojkccikaabhmocd.svg?style=popout&logo=google%20chrome&colorB=green&logoColor=lightgrey)](https://chrome.google.com/webstore/detail/sputnik/manapjdamopgbpimgojkccikaabhmocd) [![](https://img.shields.io/chrome-web-store/stars/:sputnik/manapjdamopgbpimgojkccikaabhmocd.svg?style=popout&logo=google%20chrome&logoColor=lightgrey)](https://chrome.google.com/webstore/detail/sputnik/manapjdamopgbpimgojkccikaabhmocd)
+
+[![](https://img.shields.io/amo/users/:addon/sputnik-osint/.svg?style=popout&logo=mozilla%20firefox)](https://addons.mozilla.org/en-US/firefox/addon/sputnik-osint/) [![](https://img.shields.io/amo/v/:addon/sputnik-osint/.svg?style=popout&logo=mozilla%20firefox&colorB=green)](https://addons.mozilla.org/en-US/firefox/addon/sputnik-osint/) [![](https://img.shields.io/amo/stars/:addon/sputnik-osint/.svg?style=popout&logo=mozilla%20firefox)](https://addons.mozilla.org/en-US/firefox/addon/sputnik-osint/)
+
+
+[![](https://img.shields.io/snyk/vulnerabilities/github/mitchmoser/sputnik.svg?style=popout&logo=javascript)](https://snyk.io/test/github/mitchmoser/sputnik?targetFile=package.json)
+
 Sputnik is an extension to quickly and easily search IPs, Domains, File Hashes, and URLs using free Open Source Intelligence (OSINT) resources.
 
 ## Usage
-- Text: Select the artifact you wish to search and right click
-- Links: Right click on links, audio, images, videos
+- **Text**: Select the artifact you wish to search and right click
+- **Links**: Right click on links, audio, images, videos
 - Select an OSINT tool
   - In most cases, you will be redirected straight to results
   - For tools that require user interaction such as captchas:
