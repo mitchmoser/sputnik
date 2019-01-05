@@ -1,7 +1,11 @@
-![](firefox/icons/logo_48.png?raw=true)
+<p align="center">
+    <img src="https://raw.githubusercontent.com/mitchmoser/sputnik/master/screenshots/sputnik%20logo.png"
+        height="150">
+</p>
+
 # Sputnik OSINT Extension
 
-[![](https://img.shields.io/chrome-web-store/users/:sputnik/manapjdamopgbpimgojkccikaabhmocd.svg?style=popout&logo=google%20chrome&logoColor=lightgrey)](https://chrome.google.com/webstore/detail/sputnik/manapjdamopgbpimgojkccikaabhmocd) [![](https://img.shields.io/chrome-web-store/v/:sputnik/manapjdamopgbpimgojkccikaabhmocd.svg?style=popout&logo=google%20chrome&colorB=green&logoColor=lightgrey)](https://chrome.google.com/webstore/detail/sputnik/manapjdamopgbpimgojkccikaabhmocd) [![](https://img.shields.io/chrome-web-store/stars/:sputnik/manapjdamopgbpimgojkccikaabhmocd.svg?style=popout&logo=google%20chrome&logoColor=lightgrey)](https://chrome.google.com/webstore/detail/sputnik/manapjdamopgbpimgojkccikaabhmocd)
+[![](https://img.shields.io/chrome-web-store/users/:sputnik/manapjdamopgbpimgojkccikaabhmocd.svg?style=popout&logo=google%20chrome&logoColor=dddddd)](https://chrome.google.com/webstore/detail/sputnik/manapjdamopgbpimgojkccikaabhmocd) [![](https://img.shields.io/chrome-web-store/v/:sputnik/manapjdamopgbpimgojkccikaabhmocd.svg?style=popout&logo=google%20chrome&colorB=green&logoColor=dddddd)](https://chrome.google.com/webstore/detail/sputnik/manapjdamopgbpimgojkccikaabhmocd) [![](https://img.shields.io/chrome-web-store/stars/:sputnik/manapjdamopgbpimgojkccikaabhmocd.svg?style=popout&logo=google%20chrome&logoColor=dddddd)](https://chrome.google.com/webstore/detail/sputnik/manapjdamopgbpimgojkccikaabhmocd)
 
 [![](https://img.shields.io/amo/users/:addon/sputnik-osint/.svg?style=popout&logo=mozilla%20firefox)](https://addons.mozilla.org/en-US/firefox/addon/sputnik-osint/) [![](https://img.shields.io/amo/v/:addon/sputnik-osint/.svg?style=popout&logo=mozilla%20firefox&colorB=green)](https://addons.mozilla.org/en-US/firefox/addon/sputnik-osint/) [![](https://img.shields.io/amo/stars/:addon/sputnik-osint/.svg?style=popout&logo=mozilla%20firefox)](https://addons.mozilla.org/en-US/firefox/addon/sputnik-osint/)
 
