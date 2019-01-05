@@ -1,0 +1,22 @@
+{
+  "name": "Sputnik",
+  "version": "1.0.0",
+  "description": "OSINT web extension",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mitchmoser/sputnik"
+  },
+  "bugs": {
+    "url": "https://github.com/mitchmoser/sputnik/issues"
+  },
+  "homepage": "https://github.com/mitchmoser/sputnik#README.md",
+  "dependencies": {
+  },
+  "scripts": {
+    "Firefox": "firefox/background.js",
+    "Chrome": "chrome/background.js"
+  },
+  "author": "Mitchell Moser",
+  "license": "MPL-2.0",
+  "homepage": "https://github.com/mitchmoser/sputnik"
+}
