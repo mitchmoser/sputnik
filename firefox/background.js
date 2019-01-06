@@ -487,7 +487,7 @@ browser.contextMenus.create({
 });
 
 // create empty url variable
-var url = ""
+var url = "";
 
 /*
  * The click event listener: 
@@ -498,12 +498,12 @@ var url = ""
 browser.contextMenus.onClicked.addListener((info, tab) => {
     // strip leading and trailing spaces
     if (info.selectionText) {
-        var artifact = String(info.selectionText).trim()
+        var artifact = String(info.selectionText).trim();
     } else if (info.linkUrl) {
-        var artifact = new URL(info.linkUrl)
+        var artifact = new URL(info.linkUrl);
         artifact = artifact.host;
     } else if (info.srcUrl) {
-        var artifact = new URL(info.srcUrl)
+        var artifact = new URL(info.srcUrl);
         artifact = artifact.host;
     }
     // copy the selection to clipboard
@@ -575,9 +575,6 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
                 break;
             case "FortiGuard Domain":
                 url = "http://fortiguard.com/search?q="+artifact+"&engine=1";
-                break;
-            case "HackerTarget":
-                url = "https://hackertarget.com/extract-links/";
                 break;
             case "MX Toolbox Domain":
                 url = "https://mxtoolbox.com/SuperTool.aspx?action=mx%3a"+artifact+"&run=toolpage";

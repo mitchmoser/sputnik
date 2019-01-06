@@ -5,12 +5,12 @@
 
 [![](https://img.shields.io/amo/users/:addon/sputnik-osint/.svg?style=popout&logo=mozilla%20firefox)](https://addons.mozilla.org/en-US/firefox/addon/sputnik-osint/) [![](https://img.shields.io/amo/v/:addon/sputnik-osint/.svg?style=popout&logo=mozilla%20firefox&colorB=green)](https://addons.mozilla.org/en-US/firefox/addon/sputnik-osint/) [![](https://img.shields.io/amo/stars/:addon/sputnik-osint/.svg?style=popout&logo=mozilla%20firefox)](https://addons.mozilla.org/en-US/firefox/addon/sputnik-osint/)
 
-
 [![](https://img.shields.io/snyk/vulnerabilities/github/mitchmoser/sputnik.svg?style=popout&logo=javascript)](https://snyk.io/test/github/mitchmoser/sputnik?targetFile=package.json)
 
 Sputnik is an extension to quickly and easily search IPs, Domains, File Hashes, and URLs using free Open Source Intelligence (OSINT) resources.
 
 ## Usage
+
 - **Text**: Select the artifact you wish to search and right click
 - **Links**: Right click on links, audio, images, videos
 - Select an OSINT tool
@@ -32,11 +32,11 @@ Available through [Mozilla](https://addons.mozilla.org/en-US/firefox/addon/sputn
 Available through [Chrome Web Store](https://chrome.google.com/webstore/detail/sputnik/manapjdamopgbpimgojkccikaabhmocd)
 ![](screenshots/sputnik-chrome.png?raw=true)
 
-# OSINT Resources
+## OSINT Resources
 
 The following OSINT resources have been implemented for each artifact type:
 
-## IP
+### IP
 - [AbuseIPDB](https://www.abuseipdb.com/)
 - [AlienVault OTX](https://otx.alienvault.com/)
 - [Bad Packets](https://badpackets.net/)
@@ -54,7 +54,7 @@ The following OSINT resources have been implemented for each artifact type:
 - [VirusTotal](https://www.virustotal.com/#/home/upload)
 - [X-Force](https://exchange.xforce.ibmcloud.com/)
 
-## Domain
+### Domain
 - [Alexa](https://www.alexa.com/siteinfo)
 - [BlueCoat](http://sitereview.bluecoat.com/#/)
 - [Censys](https://censys.io/)
@@ -70,7 +70,7 @@ The following OSINT resources have been implemented for each artifact type:
 - [VirusTotal](https://www.virustotal.com/#/home/upload)
 - [X-Force](https://exchange.xforce.ibmcloud.com/)
 
-## File Hash
+### File Hash
 - [AlienVault OTX](https://otx.alienvault.com/)
 - [Hybrid Analysis](https://www.hybrid-analysis.com/)
 - [Talos](https://talosintelligence.com/)
@@ -78,7 +78,7 @@ The following OSINT resources have been implemented for each artifact type:
 - [VirusTotal](https://www.virustotal.com/#/home/upload)
 - [X-Force](https://exchange.xforce.ibmcloud.com/)
 
-## URL
+### URL
 - [Any.Run](https://app.any.run/)
 - [BlueCoat](http://sitereview.bluecoat.com/#/)
 - [Extract Links](https://hackertarget.com/extract-links/)

@@ -351,7 +351,7 @@ chrome.contextMenus.create({
 });
 
 // create empty url variable
-var url = ""
+var url = "";
 
 /*
  * Source:
@@ -359,17 +359,17 @@ var url = ""
  */
 function copyStringToClipboard(str) {
     // Create new element
-    var el = document.createElement('textarea');
+    var el = document.createElement("textarea");
     // Set value (string to be copied)
     el.value = str;
     // Set non-editable to avoid focus and move outside of view
-    el.setAttribute('readonly', '');
-    el.style = {position: 'absolute', left: '-9999px'};
+    el.setAttribute("readonly", "");
+    el.style = {position: "absolute", left: "-9999px"};
     document.body.appendChild(el);
     // Select text inside element
     el.select();
     // Copy text to clipboard
-    document.execCommand('copy');
+    document.execCommand("copy");
     // Remove temporary element
     document.body.removeChild(el);
     }
@@ -382,12 +382,12 @@ function copyStringToClipboard(str) {
 chrome.contextMenus.onClicked.addListener((info, tab) => {
     // identify context type and strip leading and trailing spaces
     if (info.selectionText) {
-        var artifact = String(info.selectionText).trim()
+        var artifact = String(info.selectionText).trim();
     } else if (info.linkUrl) {
-        var artifact = new URL(info.linkUrl)
+        var artifact = new URL(info.linkUrl);
         artifact = artifact.host;
     } else if (info.srcUrl) {
-        var artifact = new URL(info.srcUrl)
+        var artifact = new URL(info.srcUrl);
         artifact = artifact.host;
     }
     // copy the selection to clipboard
@@ -536,7 +536,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 url = "https://www.virustotal.com/#/home/url";
                 break;
             case "X-Force URL":
-                url = "https://exchange.xforce.ibmcloud.com/url/"+artifact
+                url = "https://exchange.xforce.ibmcloud.com/url/"+artifact;
                 break;
             case "zscaler":
                 url = "https://zulu.zscaler.com/";
