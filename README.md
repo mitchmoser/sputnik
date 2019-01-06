@@ -15,13 +15,13 @@
 Sputnik is an extension to quickly and easily search IPs, Domains, File Hashes, and URLs using free Open Source Intelligence (OSINT) resources.
 
 ## Usage
-- **Text**: Select the artifact you wish to search and right click
-- **Links**: Right click on links, audio, images, videos
-- Select an OSINT tool
-  - In most cases, you will be redirected straight to results
-  - For tools that require user interaction such as captchas:
-    - The highlighted artifact will be saved to your clipboard
-    - You will be directed to the submission page
+  - **Text**: Select the artifact you wish to search and right click
+  - **Links**: Right click on links, audio, images, videos
+  - Select an OSINT tool
+    - In most cases, you will be redirected straight to results
+    - For tools that require user interaction such as captchas:
+      - The highlighted artifact will be saved to your clipboard
+      - You will be directed to the submission page
 
 ## Firefox
 [![](screenshots/firefox.png?raw=true)](https://addons.mozilla.org/en-US/firefox/addon/sputnik-osint/)
@@ -41,54 +41,54 @@ Available through [Chrome Web Store](https://chrome.google.com/webstore/detail/s
 The following OSINT resources have been implemented for each artifact type:
 
 ## IP
-- [AbuseIPDB](https://www.abuseipdb.com/)
-- [AlienVault OTX](https://otx.alienvault.com/)
-- [Bad Packets](https://badpackets.net/)
-- [Censys](https://censys.io/)
-- [FortiGuard](http://fortiguard.com/)
-- [GreyNoise](https://greynoise.io/)
-- [IPVoid](http://www.ipvoid.com/)
-- [Onyphe](https://www.onyphe.io/)
-- [Pulsedive](https://pulsedive.com/)
-- [SecurityTrails](https://securitytrails.com/)
-- [Shodan](https://www.shodan.io/)
-- [Talos](https://talosintelligence.com/)
-- [ThreatCrowd](https://www.threatcrowd.org/)
-- [ThreatMiner](https://www.threatminer.org/)
-- [VirusTotal](https://www.virustotal.com/#/home/upload)
-- [X-Force](https://exchange.xforce.ibmcloud.com/)
+  - [AbuseIPDB](https://www.abuseipdb.com/)
+  - [AlienVault OTX](https://otx.alienvault.com/)
+  - [Bad Packets](https://badpackets.net/)
+  - [Censys](https://censys.io/)
+  - [FortiGuard](http://fortiguard.com/)
+  - [GreyNoise](https://greynoise.io/)
+  - [IPVoid](http://www.ipvoid.com/)
+  - [Onyphe](https://www.onyphe.io/)
+  - [Pulsedive](https://pulsedive.com/)
+  - [SecurityTrails](https://securitytrails.com/)
+  - [Shodan](https://www.shodan.io/)
+  - [Talos](https://talosintelligence.com/)
+  - [ThreatCrowd](https://www.threatcrowd.org/)
+  - [ThreatMiner](https://www.threatminer.org/)
+  - [VirusTotal](https://www.virustotal.com/#/home/upload)
+  - [X-Force](https://exchange.xforce.ibmcloud.com/)
 
 ## Domain
-- [Alexa](https://www.alexa.com/siteinfo)
-- [BlueCoat](http://sitereview.bluecoat.com/#/)
-- [Censys](https://censys.io/)
-- [FortiGuard](http://fortiguard.com/)
-- [MX Toolbox](https://mxtoolbox.com/)
-- [Onyphe](https://www.onyphe.io/)
-- [Pulsedive](https://pulsedive.com/)
-- [SecurityTrails](https://securitytrails.com/)
-- [Shodan](https://www.shodan.io/)
-- [Talos](https://talosintelligence.com/)
-- [ThreatCrowd](https://www.threatcrowd.org/)
-- [ThreatMiner](https://www.threatminer.org/)
-- [VirusTotal](https://www.virustotal.com/#/home/upload)
-- [X-Force](https://exchange.xforce.ibmcloud.com/)
+  - [Alexa](https://www.alexa.com/siteinfo)
+  - [BlueCoat](http://sitereview.bluecoat.com/#/)
+  - [Censys](https://censys.io/)
+  - [FortiGuard](http://fortiguard.com/)
+  - [MX Toolbox](https://mxtoolbox.com/)
+  - [Onyphe](https://www.onyphe.io/)
+  - [Pulsedive](https://pulsedive.com/)
+  - [SecurityTrails](https://securitytrails.com/)
+  - [Shodan](https://www.shodan.io/)
+  - [Talos](https://talosintelligence.com/)
+  - [ThreatCrowd](https://www.threatcrowd.org/)
+  - [ThreatMiner](https://www.threatminer.org/)
+  - [VirusTotal](https://www.virustotal.com/#/home/upload)
+  - [X-Force](https://exchange.xforce.ibmcloud.com/)
 
 ## File Hash
-- [AlienVault OTX](https://otx.alienvault.com/)
-- [Hybrid Analysis](https://www.hybrid-analysis.com/)
-- [Talos](https://talosintelligence.com/)
-- [ThreatMiner](https://www.threatminer.org/)
-- [VirusTotal](https://www.virustotal.com/#/home/upload)
-- [X-Force](https://exchange.xforce.ibmcloud.com/)
+  - [AlienVault OTX](https://otx.alienvault.com/)
+  - [Hybrid Analysis](https://www.hybrid-analysis.com/)
+  - [Talos](https://talosintelligence.com/)
+  - [ThreatMiner](https://www.threatminer.org/)
+  - [VirusTotal](https://www.virustotal.com/#/home/upload)
+  - [X-Force](https://exchange.xforce.ibmcloud.com/)
 
 ## URL
-- [Any.Run](https://app.any.run/)
-- [BlueCoat](http://sitereview.bluecoat.com/#/)
-- [Extract Links](https://hackertarget.com/extract-links/)
-- [FortiGuard](http://fortiguard.com/)
-- [TrendMicro](https://global.sitesafety.trendmicro.com/)
-- [urlscan](https://urlscan.io/)
-- [VirusTotal](https://www.virustotal.com/#/home/upload)
-- [X-Force](https://exchange.xforce.ibmcloud.com/)
-- [Zscaler](https://zulu.zscaler.com/)
+  - [Any.Run](https://app.any.run/)
+  - [BlueCoat](http://sitereview.bluecoat.com/#/)
+  - [Extract Links](https://hackertarget.com/extract-links/)
+  - [FortiGuard](http://fortiguard.com/)
+  - [TrendMicro](https://global.sitesafety.trendmicro.com/)
+  - [urlscan](https://urlscan.io/)
+  - [VirusTotal](https://www.virustotal.com/#/home/upload)
+  - [X-Force](https://exchange.xforce.ibmcloud.com/)
+  - [Zscaler](https://zulu.zscaler.com/)
