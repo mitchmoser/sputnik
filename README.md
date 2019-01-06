@@ -14,9 +14,9 @@
 Sputnik is an extension to quickly and easily search IPs, Domains, File Hashes, and URLs using free Open Source Intelligence (OSINT) resources.
 
 ## Usage
-  - **Text**: Select the artifact you wish to search and right click
-  - **Links**: Right click on links, audio, images, videos
-  - Select an OSINT tool
+- **Text**: Select the artifact you wish to search and right click
+- **Links**: Right click on links, audio, images, videos
+- Select an OSINT tool
     - In most cases, you will be redirected straight to results
     - For tools that require user interaction such as captchas:
       - The highlighted artifact will be saved to your clipboard
