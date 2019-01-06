@@ -14,9 +14,9 @@
 Sputnik is an extension to quickly and easily search IPs, Domains, File Hashes, and URLs using free Open Source Intelligence (OSINT) resources.
 
 ## Usage
-- **Text**: Select the artifact you wish to search and right click
-- **Links**: Right click on links, audio, images, videos
-- Select an OSINT tool
+  - **Text**: Select the artifact you wish to search and right click
+  - **Links**: Right click on links, audio, images, videos
+  - Select an OSINT tool
     - In most cases, you will be redirected straight to results
     - For tools that require user interaction such as captchas:
       - The highlighted artifact will be saved to your clipboard
@@ -40,22 +40,22 @@ Available through [Chrome Web Store](https://chrome.google.com/webstore/detail/s
 The following OSINT resources have been implemented for each artifact type:
 
 ### IP
-- [AbuseIPDB](https://www.abuseipdb.com/)
-- [AlienVault OTX](https://otx.alienvault.com/)
-- [Bad Packets](https://badpackets.net/)
-- [Censys](https://censys.io/)
-- [FortiGuard](http://fortiguard.com/)
-- [GreyNoise](https://greynoise.io/)
-- [IPVoid](http://www.ipvoid.com/)
-- [Onyphe](https://www.onyphe.io/)
-- [Pulsedive](https://pulsedive.com/)
-- [SecurityTrails](https://securitytrails.com/)
-- [Shodan](https://www.shodan.io/)
-- [Talos](https://talosintelligence.com/)
-- [ThreatCrowd](https://www.threatcrowd.org/)
-- [ThreatMiner](https://www.threatminer.org/)
-- [VirusTotal](https://www.virustotal.com/#/home/upload)
-- [X-Force](https://exchange.xforce.ibmcloud.com/)
+  - [AbuseIPDB](https://www.abuseipdb.com/)
+  - [AlienVault OTX](https://otx.alienvault.com/)
+  - [Bad Packets](https://badpackets.net/)
+  - [Censys](https://censys.io/)
+  - [FortiGuard](http://fortiguard.com/)
+  - [GreyNoise](https://greynoise.io/)
+  - [IPVoid](http://www.ipvoid.com/)
+  - [Onyphe](https://www.onyphe.io/)
+  - [Pulsedive](https://pulsedive.com/)
+  - [SecurityTrails](https://securitytrails.com/)
+  - [Shodan](https://www.shodan.io/)
+  - [Talos](https://talosintelligence.com/)
+  - [ThreatCrowd](https://www.threatcrowd.org/)
+  - [ThreatMiner](https://www.threatminer.org/)
+  - [VirusTotal](https://www.virustotal.com/#/home/upload)
+  - [X-Force](https://exchange.xforce.ibmcloud.com/)
 
 ### Domain
   - [Alexa](https://www.alexa.com/siteinfo)
