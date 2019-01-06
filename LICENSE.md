@@ -180,9 +180,9 @@ If you create software not governed by this License, and you want to create a ne
 
 If You choose to distribute Source Code Form that is Incompatible With Secondary Licenses under the terms of this version of the License, the notice described in Exhibit B of this License must be attached.
 
-------------------------
+--------------------------------------------------------------------------------
 
-# Exhibit A - Source Code Form License Notice
+## Exhibit A - Source Code Form License Notice
 
     This Source Code Form is subject to the terms of the Mozilla Public
     License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -192,7 +192,7 @@ If it is not possible or desirable to put the notice in a particular file, then 
 
 You may add additional accurate notices of copyright ownership.
 
-# Exhibit B - “Incompatible With Secondary Licenses” Notice
+## Exhibit B - “Incompatible With Secondary Licenses” Notice
 
     This Source Code Form is “Incompatible With Secondary Licenses”, as
     defined by the Mozilla Public License, v. 2.0.
