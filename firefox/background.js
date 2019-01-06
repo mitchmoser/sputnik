@@ -489,6 +489,9 @@ browser.contextMenus.create({
 // create empty url variable
 var url = "";
 
+//create empty artifact variable
+var artifact = "";
+
 /*
  * The click event listener: 
  * where we perform the approprate action 
@@ -498,13 +501,13 @@ var url = "";
 browser.contextMenus.onClicked.addListener((info, tab) => {
     // strip leading and trailing spaces
     if (info.selectionText) {
-        var artifact = String(info.selectionText).trim();
+        artifact = String(info.selectionText).trim();
     } else if (info.linkUrl) {
-        var artifact = new URL(info.linkUrl);
-        artifact = artifact.host;
+        var link = new URL(info.linkUrl);
+        artifact = link.host;
     } else if (info.srcUrl) {
-        var artifact = new URL(info.srcUrl);
-        artifact = artifact.host;
+        var src = new URL(info.srcUrl);
+        artifact = src.host;
     }
     // copy the selection to clipboard
     navigator.clipboard.writeText(artifact);
