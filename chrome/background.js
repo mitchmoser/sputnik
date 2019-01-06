@@ -353,6 +353,9 @@ chrome.contextMenus.create({
 // create empty url variable
 var url = "";
 
+// create empty artifact variable
+var artifact = "";
+
 /*
  * Source:
  * https://stackoverflow.com/questions/13899299/write-text-to-clipboard#18258178
@@ -382,13 +385,13 @@ function copyStringToClipboard(str) {
 chrome.contextMenus.onClicked.addListener((info, tab) => {
     // identify context type and strip leading and trailing spaces
     if (info.selectionText) {
-        var artifact = String(info.selectionText).trim();
+        artifact = String(info.selectionText).trim();
     } else if (info.linkUrl) {
-        var artifact = new URL(info.linkUrl);
-        artifact = artifact.host;
+        var link = new URL(info.linkUrl);
+        artifact = link.host;
     } else if (info.srcUrl) {
-        var artifact = new URL(info.srcUrl);
-        artifact = artifact.host;
+        var src = new URL(info.srcUrl);
+        artifact = src.host;
     }
     // copy the selection to clipboard
     copyStringToClipboard(artifact);
