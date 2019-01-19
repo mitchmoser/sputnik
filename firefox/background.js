@@ -151,7 +151,7 @@ browser.contextMenus.create({
 
 browser.contextMenus.create({
     id: "TOR IP",
-    title: "TOR Relay Search",
+    title: "TOR Relay",
     contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "IP",
     icons: {
@@ -310,7 +310,7 @@ browser.contextMenus.create({
 
 browser.contextMenus.create({
     id: "TOR Domain",
-    title: "TOR Relay Search",
+    title: "TOR Relay",
     contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "Domain",
     icons: {

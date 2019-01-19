@@ -108,7 +108,7 @@ chrome.contextMenus.create({
 
 chrome.contextMenus.create({
     "id": "TOR IP",
-    "title": "TOR Relay Search",
+    "title": "TOR Relay",
     "parentId": "IP",
     "contexts": ["selection", "link", "image", "video", "audio"]
 });
@@ -222,7 +222,7 @@ chrome.contextMenus.create({
 
 chrome.contextMenus.create({
     "id": "TOR Domain",
-    "title": "TOR Relay Search",
+    "title": "TOR Relay",
     "parentId": "Domain",
     "contexts": ["selection", "link", "image", "video", "audio"]
 });
