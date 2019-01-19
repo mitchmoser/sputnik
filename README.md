@@ -54,6 +54,7 @@ The following OSINT resources have been implemented for each artifact type:
   - [Talos](https://talosintelligence.com/)
   - [ThreatCrowd](https://www.threatcrowd.org/)
   - [ThreatMiner](https://www.threatminer.org/)
+  - [TOR Relay Search](https://metrics.torproject.org/rs.html#simple)
   - [VirusTotal](https://www.virustotal.com/#/home/upload)
   - [X-Force](https://exchange.xforce.ibmcloud.com/)
 
@@ -70,6 +71,7 @@ The following OSINT resources have been implemented for each artifact type:
   - [Talos](https://talosintelligence.com/)
   - [ThreatCrowd](https://www.threatcrowd.org/)
   - [ThreatMiner](https://www.threatminer.org/)
+  - [TOR Relay Search](https://metrics.torproject.org/rs.html#simple)
   - [VirusTotal](https://www.virustotal.com/#/home/upload)
   - [X-Force](https://exchange.xforce.ibmcloud.com/)
 

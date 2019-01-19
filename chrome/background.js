@@ -107,6 +107,13 @@ chrome.contextMenus.create({
 });
 
 chrome.contextMenus.create({
+    "id": "TOR IP",
+    "title": "TOR Relay Search",
+    "parentId": "IP",
+    "contexts": ["selection", "link", "image", "video", "audio"]
+});
+
+chrome.contextMenus.create({
     "id": "VT IP",
     "title": "VirusTotal",
     "parentId": "IP",
@@ -209,6 +216,13 @@ chrome.contextMenus.create({
 chrome.contextMenus.create({
     "id": "ThreatMiner Domain",
     "title": "ThreatMiner",
+    "parentId": "Domain",
+    "contexts": ["selection", "link", "image", "video", "audio"]
+});
+
+chrome.contextMenus.create({
+    "id": "TOR Domain",
+    "title": "TOR Relay Search",
     "parentId": "Domain",
     "contexts": ["selection", "link", "image", "video", "audio"]
 });
@@ -442,6 +456,9 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
             case "ThreatMiner IP":
                 url = "https://www.threatminer.org/host.php?q="+artifact;
                 break;
+            case "TOR IP":
+                url = "https://metrics.torproject.org/rs.html#search/"+artifact;
+                break;
             case "VT IP":
                 url = "https://www.virustotal.com/#/ip-address/"+artifact;
                 break;
@@ -486,6 +503,9 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 break;
             case "ThreatMiner Domain":
                 url = "https://www.threatminer.org/domain.php?q="+artifact;
+                break;
+            case "TOR Domain":
+                url = "https://metrics.torproject.org/rs.html#search/"+artifact;
                 break;
             case "VT Domain":
                 url = "https://virustotal.com/#/domain/"+artifact;
