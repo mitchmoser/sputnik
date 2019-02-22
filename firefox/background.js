@@ -529,8 +529,7 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
         var src = new URL(info.srcUrl);
         artifact = src.host;
     }
-    // copy the selection to clipboard
-    navigator.clipboard.writeText(artifact);
+    // will copy the selection to clipboard after switch statement
 
     switch (info.menuItemId) {
             /*
@@ -688,4 +687,6 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
                 break;
     }
     browser.tabs.create({url: url});
+    // copy the selection to clipboard
+    navigator.clipboard.writeText(artifact);
 });
