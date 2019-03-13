@@ -9,7 +9,7 @@
 [![Chrome Version](https://img.shields.io/chrome-web-store/v/manapjdamopgbpimgojkccikaabhmocd.svg?style=popout&logo=google%20chrome&colorB=green&logoColor=dddddd)](https://chrome.google.com/webstore/detail/sputnik/manapjdamopgbpimgojkccikaabhmocd)
 [![Chrome Stars](https://img.shields.io/chrome-web-store/stars/manapjdamopgbpimgojkccikaabhmocd.svg?style=popout&logo=google%20chrome&logoColor=dddddd)](https://chrome.google.com/webstore/detail/sputnik/manapjdamopgbpimgojkccikaabhmocd)
 
-[![Firefox Downloads](https://img.shields.io/amo/users/sputnik-osint.svg?style=popout&logo=mozilla%20firefox)](https://addons.mozilla.org/en-US/firefox/addon/sputnik-osint/)
+[![Firefox Downloads](https://img.shields.io/amo/users/sputnik-osint.svg?style=popout&logo=mozilla%20firefox&colorB=green)](https://addons.mozilla.org/en-US/firefox/addon/sputnik-osint/)
 [![Firefox Version](https://img.shields.io/amo/v/sputnik-osint.svg?style=popout&logo=mozilla%20firefox&colorB=green)](https://addons.mozilla.org/en-US/firefox/addon/sputnik-osint/)
 [![Firefox Stars](https://img.shields.io/amo/stars/sputnik-osint.svg?style=popout&logo=mozilla%20firefox)](https://addons.mozilla.org/en-US/firefox/addon/sputnik-osint/)
 
