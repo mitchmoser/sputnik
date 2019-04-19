@@ -90,7 +90,7 @@ browser.contextMenus.create({
 });
 
 browser.contextMenus.create({
-    id: "MX Toolbox ARIN",
+    id: "MX Toolbox ARIN IP",
     title: "MX Toolbox",
     contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "IP",
