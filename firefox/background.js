@@ -579,7 +579,7 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
             case "IPVoid IP":
                 url = "http://www.ipvoid.com/";
                 break;
-            case "MX Toolbox Arin IP":
+            case "MX Toolbox ARIN IP":
                 url = "http://www.mxtoolbox.com/SuperTool.aspx?action=arin%3a"+artifact;
                 break;
             case "Onyphe IP":
