@@ -573,7 +573,7 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
             case "GreyNoise IP":
                 url = "https://viz.greynoise.io/ip/"+artifact;
                 break;
-            case "HackerTarget ReverseIP":
+            case "HackerTarget Reverse IP":
                 url = "https://api.hackertarget.com/reverseiplookup/?q="+artifact;
                 break;
             case "IPVoid IP":
