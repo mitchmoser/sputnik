@@ -65,8 +65,8 @@ chrome.contextMenus.create({
 });
 
 chrome.contextMenus.create({
-    "id": "MxToolbox ARIN",
-    "title": "MxToolbox",
+    "id": "MX Toolbox ARIN",
+    "title": "MX Toolbox",
     "parentId": "IP",
     "contexts": ["selection", "link", "image", "video", "audio"]
 });
