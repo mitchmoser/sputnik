@@ -51,8 +51,22 @@ chrome.contextMenus.create({
 });
 
 chrome.contextMenus.create({
+    "id": "HackerTarget Reverse IP",
+    "title": "HackerTarget",
+    "parentId": "IP",
+    "contexts": ["selection", "link", "image", "video", "audio"]
+});
+
+chrome.contextMenus.create({
     "id": "IPVoid IP",
     "title": "IPVoid",
+    "parentId": "IP",
+    "contexts": ["selection", "link", "image", "video", "audio"]
+});
+
+chrome.contextMenus.create({
+    "id": "MX Toolbox ARIN IP",
+    "title": "MX Toolbox",
     "parentId": "IP",
     "contexts": ["selection", "link", "image", "video", "audio"]
 });
@@ -432,8 +446,14 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
             case "GreyNoise IP":
                 url = "https://viz.greynoise.io/ip/"+artifact;
                 break;
+            case "HackerTarget Reverse IP":
+                url = "https://api.hackertarget.com/reverseiplookup/?q="+artifact;
+                break;
             case "IPVoid IP":
                 url = "http://www.ipvoid.com/";
+                break;
+            case "MX Toolbox ARIN IP":
+                url = "http://www.mxtoolbox.com/SuperTool.aspx?action=arin%3a"+artifact;
                 break;
             case "Onyphe IP":
                 url = "https://www.onyphe.io/search/?query="+artifact;
