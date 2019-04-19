@@ -65,7 +65,7 @@ chrome.contextMenus.create({
 });
 
 chrome.contextMenus.create({
-    "id": "MX Toolbox ARIN",
+    "id": "MX Toolbox ARIN IP",
     "title": "MX Toolbox",
     "parentId": "IP",
     "contexts": ["selection", "link", "image", "video", "audio"]
@@ -452,7 +452,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
             case "IPVoid IP":
                 url = "http://www.ipvoid.com/";
                 break;
-            case "MxToolbox ARIN":
+            case "MX Toolbox ARIN IP":
                 url = "http://www.mxtoolbox.com/SuperTool.aspx?action=arin%3a"+artifact;
                 break;
             case "Onyphe IP":
