@@ -29,6 +29,16 @@ browser.contextMenus.create({
 });
 
 browser.contextMenus.create({
+    id: "ARIN IP",
+    title: "ARIN",
+    contexts: ["selection", "link", "image", "video", "audio"],
+    parentId: "IP",
+    icons: {
+        "48": "icons/arin_48.png"
+    }
+});
+
+browser.contextMenus.create({
     id: "Bad Packets IP",
     title: "Bad Packets",
     contexts: ["selection", "link", "image", "video", "audio"],
@@ -76,6 +86,16 @@ browser.contextMenus.create({
     parentId: "IP",
     icons: {
         "48": "icons/hackertarget_48.png"
+    }
+});
+
+browser.contextMenus.create({
+    id: "IPinfo IP",
+    title: "IPinfo",
+    contexts: ["selection", "link", "image", "video", "audio"],
+    parentId: "IP",
+    icons: {
+        "48": "icons/ipinfo_48.png"
     }
 });
 
@@ -561,6 +581,9 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
             case "Alien IP":
                 url = "https://otx.alienvault.com/indicator/ip/"+artifact;
                 break;
+            case "ARIN IP":
+                url = "https://search.arin.net/rdap/?query="+artifact;
+                break;
             case "Bad Packets IP":
                 url = "https://mirai.badpackets.net/?ipAddress="+artifact;
                 break;
@@ -575,6 +598,9 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
                 break;
             case "HackerTarget Reverse IP":
                 url = "https://api.hackertarget.com/reverseiplookup/?q="+artifact;
+                break;
+            case "IPinfo IP":
+                url = "https://ipinfo.io/"+artifact;
                 break;
             case "IPVoid IP":
                 url = "http://www.ipvoid.com/";

@@ -23,6 +23,13 @@ chrome.contextMenus.create({
 });
 
 chrome.contextMenus.create({
+    "id": "ARIN IP",
+    "title": "ARIN",
+    "parentId": "IP",
+    "contexts": ["selection", "link", "image", "video", "audio"]
+});
+
+chrome.contextMenus.create({
     "id": "Bad Packets IP",
     "title": "Bad Packets",
     "parentId": "IP",
@@ -53,6 +60,13 @@ chrome.contextMenus.create({
 chrome.contextMenus.create({
     "id": "HackerTarget Reverse IP",
     "title": "HackerTarget",
+    "parentId": "IP",
+    "contexts": ["selection", "link", "image", "video", "audio"]
+});
+
+chrome.contextMenus.create({
+    "id": "IPinfo IP",
+    "title": "IPinfo",
     "parentId": "IP",
     "contexts": ["selection", "link", "image", "video", "audio"]
 });
@@ -434,6 +448,9 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
             case "Alien IP":
                 url = "https://otx.alienvault.com/indicator/ip/"+artifact;
                 break;
+            case "ARIN IP":
+                url = "https://search.arin.net/rdap/?query="+artifact;
+                break;
             case "Bad Packets IP":
                 url = "https://mirai.badpackets.net/?ipAddress="+artifact;
                 break;
@@ -448,6 +465,9 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 break;
             case "HackerTarget Reverse IP":
                 url = "https://api.hackertarget.com/reverseiplookup/?q="+artifact;
+                break;
+            case "IPinfo IP":
+                url = "https://ipinfo.io/"+artifact;
                 break;
             case "IPVoid IP":
                 url = "http://www.ipvoid.com/";

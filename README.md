@@ -46,11 +46,13 @@ The following OSINT resources have been implemented for each artifact type:
 ### IP
   - [AbuseIPDB](https://www.abuseipdb.com/)
   - [AlienVault OTX](https://otx.alienvault.com/)
+  - [ARIN](https://search.arin.net/rdap/)
   - [Bad Packets](https://badpackets.net/)
   - [Censys](https://censys.io/)
   - [FortiGuard](http://fortiguard.com/)
   - [GreyNoise](https://greynoise.io/)
   - [HackerTarget](https://hackertarget.com/)
+  - [IPinfo](http://www.ipinfo.com/)
   - [IPVoid](http://www.ipvoid.com/)
   - [MX Toolbox](https://mxtoolbox.com/)
   - [Onyphe](https://www.onyphe.io/)
