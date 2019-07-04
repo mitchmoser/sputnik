@@ -557,12 +557,12 @@ function sanitizeArtifact(artifact) {
         artifact = artifact.replace("[.]", ".");
     }
 
-    if(artifact.includes("hxxp")) {
-        artifact = artifact.replace("hxxp", "http");
+    if(artifact.includes("hxxp://")) {
+        artifact = artifact.replace("hxxp://", "http://");
     }
 
-    if(artifact.includes("hxxps")) {
-        artifact = artifact.replace("hxxps", "https");
+    if(artifact.includes("hxxps://")) {
+        artifact = artifact.replace("hxxps://", "https://");
     }
     return artifact;
 }
@@ -586,7 +586,7 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
     }
     // will copy the selection to clipboard after switch statement
 
-    // sanitize artifact if it is secured agains clicking
+    // unsanitize artifact if it is secured agains clicking
     artifact = sanitizeArtifact(artifact);
 
     switch (info.menuItemId) {
