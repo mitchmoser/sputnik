@@ -451,7 +451,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
         artifact = src.host;
     }
 
-    // unsanitize artifact if it is secured agains clicking
+    // unsanitize artifact if it is secured against clicking
     artifact = sanitizeArtifact(artifact);
 
     // copy the selection to clipboard

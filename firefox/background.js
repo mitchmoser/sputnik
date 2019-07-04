@@ -586,7 +586,7 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
     }
     // will copy the selection to clipboard after switch statement
 
-    // unsanitize artifact if it is secured agains clicking
+    // unsanitize artifact if it is secured against clicking
     artifact = sanitizeArtifact(artifact);
 
     switch (info.menuItemId) {
