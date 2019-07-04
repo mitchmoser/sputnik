@@ -552,19 +552,18 @@ var url = "";
 //create empty artifact variable
 var artifact = "";
 
-function sanitizeArtifact(artifact) { 
-    while(String(artifact).includes("[.]")) {
-            artifact = String(artifact).replace("[", "").replace("]", "");
+function sanitizeArtifact(artifact) {
+    while(artifact.includes("[.]")) {
+        artifact = artifact.replace("[.]", ".");
     }
 
-    if(String(artifact).includes("hxxp")) {
-        artifact = String(artifact).replace("hxxp", "http");
+    if(artifact.includes("hxxp")) {
+        artifact = artifact.replace("hxxp", "http");
     }
 
-    if(String(artifact).includes("hxxps")) {
-        artifact = String(artifact).replace("hxxps", "https");
+    if(artifact.includes("hxxps")) {
+        artifact = artifact.replace("hxxps", "https");
     }
-
     return artifact;
 }
 
