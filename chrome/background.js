@@ -419,6 +419,21 @@ function copyStringToClipboard(str) {
     document.body.removeChild(el);
     }
 
+function sanitizeArtifact(artifact) {
+    while(artifact.includes("[.]")) {
+        artifact = artifact.replace("[.]", ".");
+    }
+
+    if(artifact.includes("hxxp://")) {
+        artifact = artifact.replace("hxxp://", "http://");
+    }
+
+    if(artifact.includes("hxxps://")) {
+        artifact = artifact.replace("hxxps://", "https://");
+    }
+    return artifact;
+}
+
 /*
  * The click event listener: 
  * where we perform the approprate action 
@@ -435,6 +450,10 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
         var src = new URL(info.srcUrl);
         artifact = src.host;
     }
+
+    // unsanitize artifact if it is secured agains clicking
+    artifact = sanitizeArtifact(artifact);
+
     // copy the selection to clipboard
     copyStringToClipboard(artifact);
 

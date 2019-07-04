@@ -552,6 +552,21 @@ var url = "";
 //create empty artifact variable
 var artifact = "";
 
+function sanitizeArtifact(artifact) {
+    while(artifact.includes("[.]")) {
+        artifact = artifact.replace("[.]", ".");
+    }
+
+    if(artifact.includes("hxxp://")) {
+        artifact = artifact.replace("hxxp://", "http://");
+    }
+
+    if(artifact.includes("hxxps://")) {
+        artifact = artifact.replace("hxxps://", "https://");
+    }
+    return artifact;
+}
+
 /*
  * The click event listener: 
  * where we perform the approprate action 
@@ -570,6 +585,9 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
         artifact = src.host;
     }
     // will copy the selection to clipboard after switch statement
+
+    // unsanitize artifact if it is secured agains clicking
+    artifact = sanitizeArtifact(artifact);
 
     switch (info.menuItemId) {
             /*
