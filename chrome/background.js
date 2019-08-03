@@ -72,6 +72,13 @@ chrome.contextMenus.create({
 });
 
 chrome.contextMenus.create({
+    "id": "IP Quality Score",
+    "title": "IIP Quality Score",
+    "parentId": "IP",
+    "contexts": ["selection", "link", "image", "video", "audio"]
+});
+
+chrome.contextMenus.create({
     "id": "IPVoid IP",
     "title": "IPVoid",
     "parentId": "IP",
@@ -487,6 +494,9 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 break;
             case "IPinfo IP":
                 url = "https://ipinfo.io/"+artifact;
+                break;
+            case "IP Quality Score":
+                url = "https://www.ipqualityscore.com/free-ip-lookup-proxy-vpn-test/lookup/"+artifact;
                 break;
             case "IPVoid IP":
                 url = "http://www.ipvoid.com/";

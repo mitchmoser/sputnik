@@ -100,6 +100,16 @@ browser.contextMenus.create({
 });
 
 browser.contextMenus.create({
+    id: "IP Quality Score",
+    title: "IP Quality Score",
+    contexts: ["selection", "link", "image", "video", "audio"],
+    parentId: "IP",
+    icons: {
+        "48": "icons/ipqualityscore_48.png"
+    }
+});
+
+browser.contextMenus.create({
     id: "IPVoid IP",
     title: "IPVoid",
     contexts: ["selection", "link", "image", "video", "audio"],
@@ -619,6 +629,9 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
                 break;
             case "IPinfo IP":
                 url = "https://ipinfo.io/"+artifact;
+                break;
+            case "IP Quality Score":
+                url = "https://www.ipqualityscore.com/free-ip-lookup-proxy-vpn-test/lookup/"+artifact;
                 break;
             case "IPVoid IP":
                 url = "http://www.ipvoid.com/";
