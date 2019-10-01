@@ -478,7 +478,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 url = "https://search.arin.net/rdap/?query="+artifact;
                 break;
             case "Bad Packets IP":
-                url = "https://mirai.badpackets.net/?ipAddress="+artifact;
+                url = "https://mirai.badpackets.net/?source_ip_address="+artifact;
                 break;
             case "Censys IP":
                 url = "https://censys.io/ipv4/"+artifact;
