@@ -646,7 +646,7 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
                 url = "https://pulsedive.com/indicator/?ioc="+window.btoa(artifact); // btoa() = base64 encode
                 break;
             case "SecurityTrails IP":
-                url = "https://securitytrails.com/search/domain/"+artifact;
+                url = "https://securitytrails.com/list/ip/"+artifact;
                 break;
             case "Shodan IP":
                 url = "https://www.shodan.io/host/"+artifact;
@@ -694,7 +694,7 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
                 url = "https://pulsedive.com/indicator/?ioc="+window.btoa(artifact); // btoa() = base64 encode
                 break;
             case "SecurityTrails Domain":
-                url = "https://securitytrails.com/search/domain/"+artifact;
+                url = "https://securitytrails.com/domain/"+artifact+"/dns";
                 break;
             case "Shodan Domain":
                 url = "https://www.shodan.io/search?query="+artifact;
