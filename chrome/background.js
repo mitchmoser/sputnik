@@ -529,7 +529,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 url = "https://metrics.torproject.org/rs.html#search/"+artifact;
                 break;
             case "VT IP":
-                url = "https://www.virustotal.com/#/ip-address/"+artifact;
+                url = "https://www.virustotal.com/gui/search/"+artifact;
                 break;
             case "X-Force IP":
                 url = "https://exchange.xforce.ibmcloud.com/ip/"+artifact;
@@ -577,7 +577,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 url = "https://metrics.torproject.org/rs.html#search/"+artifact;
                 break;
             case "VT Domain":
-                url = "https://virustotal.com/#/domain/"+artifact;
+                url = "https://virustotal.com/gui/search/"+artifact;
                 break;
             case "X-Force Domain":
                 url = "https://exchange.xforce.ibmcloud.com/url/"+artifact;
@@ -598,7 +598,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 url = "https://www.threatminer.org/sample.php?q="+artifact;
                 break;
             case "VT Hash":
-                url = "https://www.virustotal.com/#/file/"+artifact;
+                url = "https://www.virustotal.com/gui/search/"+artifact;
                 break;
             case "X-Force Hash":
                 url = "https://exchange.xforce.ibmcloud.com/malware/"+artifact;
@@ -625,7 +625,8 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 url = "https://urlscan.io/";
                 break;
             case "VT URL":
-                url = "https://www.virustotal.com/#/home/url";
+                vturlhash = CryptoJS.SHA256(artifact);
+                url = "https://www.virustotal.com/gui/url/"+vturlhash;
                 break;
             case "X-Force URL":
                 url = "https://exchange.xforce.ibmcloud.com/url/"+artifact;
