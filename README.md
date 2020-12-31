@@ -71,6 +71,7 @@ The following OSINT resources have been implemented for each artifact type:
   - [BlueCoat](http://sitereview.bluecoat.com/#/)
   - [Censys](https://censys.io/)
   - [FortiGuard](http://fortiguard.com/)
+  - [host.io](https://host.io/)
   - [MX Toolbox](https://mxtoolbox.com/)
   - [Onyphe](https://www.onyphe.io/)
   - [Pulsedive](https://pulsedive.com/)
