@@ -200,6 +200,13 @@ chrome.contextMenus.create({
 });
 
 chrome.contextMenus.create({
+    "id": "host.io Domain",
+    "title": "host.io",
+    "parentId": "Domain",
+    "contexts": ["selection", "link", "image", "video", "audio"]
+});
+
+chrome.contextMenus.create({
     "id": "MX Toolbox Domain",
     "title": "MX Toolbox",
     "parentId": "Domain",
@@ -548,6 +555,9 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 break;
             case "FortiGuard Domain":
                 url = "http://fortiguard.com/search?q="+artifact+"&engine=1";
+                break;
+            case "host.io Domain":
+                url = "https://host.io/"+artifact;
                 break;
             case "MX Toolbox Domain":
                 url = "https://mxtoolbox.com/SuperTool.aspx?action=mx%3a"+artifact+"&run=toolpage";

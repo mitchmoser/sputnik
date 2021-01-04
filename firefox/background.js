@@ -279,6 +279,16 @@ browser.contextMenus.create({
 });
 
 browser.contextMenus.create({
+    id: "host.io Domain",
+    title: "host.io",
+    contexts: ["selection", "link", "image", "video", "audio"],
+    parentId: "Domain",
+    icons: {
+        "48": "icons/hostio_48.png"
+    }
+});
+
+browser.contextMenus.create({
     id: "MX Toolbox Domain",
     title: "MX Toolbox",
     contexts: ["selection", "link", "image", "video", "audio"],
@@ -683,6 +693,9 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
                 break;
             case "FortiGuard Domain":
                 url = "http://fortiguard.com/search?q="+artifact+"&engine=1";
+                break;
+            case "host.io Domain":
+                url = "http://host.io/"+artifact;
                 break;
             case "MX Toolbox Domain":
                 url = "https://mxtoolbox.com/SuperTool.aspx?action=mx%3a"+artifact+"&run=toolpage";
