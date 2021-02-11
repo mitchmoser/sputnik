@@ -121,6 +121,13 @@ chrome.contextMenus.create({
 });
 
 chrome.contextMenus.create({
+    "id": "Spyse IP",
+    "title": "Spyse",
+    "parentId": "IP",
+    "contexts": ["selection", "link", "image", "video", "audio"]
+});
+
+chrome.contextMenus.create({
     "id": "Talos IP",
     "title": "Talos",
     "parentId": "IP",
@@ -237,6 +244,13 @@ chrome.contextMenus.create({
 chrome.contextMenus.create({
     "id": "Shodan Domain",
     "title": "Shodan",
+    "parentId": "Domain",
+    "contexts": ["selection", "link", "image", "video", "audio"]
+});
+
+chrome.contextMenus.create({
+    "id": "Spyse Domain",
+    "title": "Spyse",
     "parentId": "Domain",
     "contexts": ["selection", "link", "image", "video", "audio"]
 });
@@ -523,6 +537,9 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
             case "Shodan IP":
                 url = "https://www.shodan.io/host/"+artifact;
                 break;
+            case "Spyse IP":
+                url = "https://spyse.com/target/ip/"+artifact;
+                break;
             case "Talos IP":
                 url = "https://talosintelligence.com/reputation_center/lookup?search="+artifact;
                 break;
@@ -573,6 +590,9 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 break;
             case "Shodan Domain":
                 url = "https://www.shodan.io/search?query="+artifact;
+                break;
+            case "Spyse Domain":
+                url = "https://spyse.com/target/domain/"+artifact;
                 break;
             case "Talos Domain":
                 url = "https://talosintelligence.com/reputation_center/lookup?search="+artifact;

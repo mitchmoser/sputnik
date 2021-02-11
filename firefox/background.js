@@ -170,6 +170,16 @@ browser.contextMenus.create({
 });
 
 browser.contextMenus.create({
+    id: "Spyse IP",
+    title: "Spyse",
+    contexts: ["selection", "link", "image", "video", "audio"],
+    parentId: "IP",
+    icons: {
+        "48": "icons/spyse_48.png"
+    }
+});
+
+browser.contextMenus.create({
     id: "Talos IP",
     title: "Talos",
     contexts: ["selection", "link", "image", "video", "audio"],
@@ -335,6 +345,16 @@ browser.contextMenus.create({
     parentId: "Domain",
     icons: {
         "48": "icons/shodan_48.png"
+    }
+});
+
+browser.contextMenus.create({
+    id: "Spyse Domain",
+    title: "Spyse",
+    contexts: ["selection", "link", "image", "video", "audio"],
+    parentId: "Domain",
+    icons: {
+        "48": "icons/spyse_48.png"
     }
 });
 
@@ -661,6 +681,9 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
             case "Shodan IP":
                 url = "https://www.shodan.io/host/"+artifact;
                 break;
+            case "Spyse IP":
+                url = "https://spyse.com/target/ip/"+artifact;
+                break;
             case "Talos IP":
                 url = "https://talosintelligence.com/reputation_center/lookup?search="+artifact;
                 break;
@@ -711,6 +734,9 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
                 break;
             case "Shodan Domain":
                 url = "https://www.shodan.io/search?query="+artifact;
+                break;
+            case "Spyse Domain":
+                url = "https://spyse.com/target/domain/"+artifact;
                 break;
             case "Talos Domain":
                 url = "https://talosintelligence.com/reputation_center/lookup?search="+artifact;
