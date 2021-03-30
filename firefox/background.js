@@ -391,7 +391,7 @@ browser.contextMenus.create({
     id: "URLhaus Domain",
     title: "URLhaus",
     contexts: ["selection", "link", "image", "video", "audio"],
-    parentId: "IP",
+    parentId: "Domain",
     icons: {
         "48": "icons/urlhaus_48.png"
     }
@@ -470,7 +470,7 @@ browser.contextMenus.create({
     id: "URLhaus Hash",
     title: "URLhaus",
     contexts: ["selection", "link", "image", "video", "audio"],
-    parentId: "IP",
+    parentId: "hash",
     icons: {
         "48": "icons/urlhaus_48.png"
     }
@@ -559,7 +559,7 @@ browser.contextMenus.create({
     id: "URLhaus URL",
     title: "URLhaus",
     contexts: ["selection", "link", "image", "video", "audio"],
-    parentId: "IP",
+    parentId: "URL",
     icons: {
         "48": "icons/urlhaus_48.png"
     }
