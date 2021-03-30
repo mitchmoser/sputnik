@@ -73,7 +73,7 @@ chrome.contextMenus.create({
 
 chrome.contextMenus.create({
     "id": "IP Quality Score",
-    "title": "IIP Quality Score",
+    "title": "IP Quality Score",
     "parentId": "IP",
     "contexts": ["selection", "link", "image", "video", "audio"]
 });
@@ -88,13 +88,6 @@ chrome.contextMenus.create({
 chrome.contextMenus.create({
     "id": "MX Toolbox ARIN IP",
     "title": "MX Toolbox",
-    "parentId": "IP",
-    "contexts": ["selection", "link", "image", "video", "audio"]
-});
-
-chrome.contextMenus.create({
-    "id": "Onyphe IP",
-    "title": "Onyphe",
     "parentId": "IP",
     "contexts": ["selection", "link", "image", "video", "audio"]
 });
@@ -223,13 +216,6 @@ chrome.contextMenus.create({
 chrome.contextMenus.create({
     "id": "MX Toolbox Domain",
     "title": "MX Toolbox",
-    "parentId": "Domain",
-    "contexts": ["selection", "link", "image", "video", "audio"]
-});
-
-chrome.contextMenus.create({
-    "id": "Onyphe Domain",
-    "title": "Onyphe",
     "parentId": "Domain",
     "contexts": ["selection", "link", "image", "video", "audio"]
 });
@@ -553,9 +539,6 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
             case "MX Toolbox ARIN IP":
                 url = "http://www.mxtoolbox.com/SuperTool.aspx?action=arin%3a"+artifact;
                 break;
-            case "Onyphe IP":
-                url = "https://www.onyphe.io/search/?query="+artifact;
-                break;
             case "Pulsedive IP":
                 url = "https://pulsedive.com/indicator/?ioc="+window.btoa(artifact); // btoa() = base64 encode
                 break;
@@ -609,9 +592,6 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 break;
             case "MX Toolbox Domain":
                 url = "https://mxtoolbox.com/SuperTool.aspx?action=mx%3a"+artifact+"&run=toolpage";
-                break;
-            case "Onyphe Domain":
-                url = "https://www.onyphe.io/search/?query="+artifact;
                 break;
             case "Pulsedive Domain":
                 url = "https://pulsedive.com/indicator/?ioc="+window.btoa(artifact); // btoa() = base64 encode

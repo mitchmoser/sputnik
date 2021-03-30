@@ -129,16 +129,6 @@ browser.contextMenus.create({
 });
 
 browser.contextMenus.create({
-    id: "Onyphe IP",
-    title: "Onyphe",
-    contexts: ["selection", "link", "image", "video", "audio"],
-    parentId: "IP",
-    icons: {
-        "48": "icons/onyphe_48.png"
-    }
-});
-
-browser.contextMenus.create({
     id: "Pulsedive IP",
     title: "Pulsedive",
     contexts: ["selection", "link", "image", "video", "audio"],
@@ -314,16 +304,6 @@ browser.contextMenus.create({
     parentId: "Domain",
     icons: {
         "48": "icons/mxtoolbox_48.png"
-    }
-});
-
-browser.contextMenus.create({
-    id: "Onyphe Domain",
-    title: "Onyphe",
-    contexts: ["selection", "link", "image", "video", "audio"],
-    parentId: "Domain",
-    icons: {
-        "48": "icons/onyphe_48.png"
     }
 });
 
@@ -708,9 +688,6 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
             case "MX Toolbox ARIN IP":
                 url = "http://www.mxtoolbox.com/SuperTool.aspx?action=arin%3a"+artifact;
                 break;
-            case "Onyphe IP":
-                url = "https://www.onyphe.io/search/?query="+artifact;
-                break;
             case "Pulsedive IP":
                 url = "https://pulsedive.com/indicator/?ioc="+window.btoa(artifact); // btoa() = base64 encode
                 break;
@@ -764,9 +741,6 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
                 break;
             case "MX Toolbox Domain":
                 url = "https://mxtoolbox.com/SuperTool.aspx?action=mx%3a"+artifact+"&run=toolpage";
-                break;
-            case "Onyphe Domain":
-                url = "https://www.onyphe.io/search/?query="+artifact;
                 break;
             case "Pulsedive Domain":
                 url = "https://pulsedive.com/indicator/?ioc="+window.btoa(artifact); // btoa() = base64 encode
