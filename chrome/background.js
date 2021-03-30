@@ -156,6 +156,13 @@ chrome.contextMenus.create({
 });
 
 chrome.contextMenus.create({
+    "id": "URLhaus IP",
+    "title": "URLhaus",
+    "parentId": "IP",
+    "contexts": ["selection", "link", "image", "video", "audio"]
+});
+
+chrome.contextMenus.create({
     "id": "VT IP",
     "title": "VirusTotal",
     "parentId": "IP",
@@ -284,6 +291,13 @@ chrome.contextMenus.create({
 });
 
 chrome.contextMenus.create({
+    "id": "URLhaus Domain",
+    "title": "URLhaus",
+    "parentId": "Domain",
+    "contexts": ["selection", "link", "image", "video", "audio"]
+});
+
+chrome.contextMenus.create({
     "id": "VT Domain",
     "title": "VirusTotal",
     "parentId": "Domain",
@@ -330,6 +344,13 @@ chrome.contextMenus.create({
 chrome.contextMenus.create({
     "id": "ThreatMiner Hash",
     "title": "ThreatMiner",
+    "parentId": "Hash",
+    "contexts": ["selection"]
+});
+
+chrome.contextMenus.create({
+    "id": "URLhaus Hash",
+    "title": "URLhaus",
     "parentId": "Hash",
     "contexts": ["selection"]
 });
@@ -395,6 +416,13 @@ chrome.contextMenus.create({
 chrome.contextMenus.create({
     "id": "urlscan",
     "title": "urlscan",
+    "parentId": "URL",
+    "contexts": ["selection", "link", "image", "video", "audio"]
+});
+
+chrome.contextMenus.create({
+    "id": "URLhaus URL",
+    "title": "URLhaus",
     "parentId": "URL",
     "contexts": ["selection", "link", "image", "video", "audio"]
 });
@@ -552,6 +580,9 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
             case "TOR IP":
                 url = "https://metrics.torproject.org/rs.html#search/"+artifact;
                 break;
+            case "URLhaus IP":
+                url = "https://urlhaus.abuse.ch/browse.php?search="+artifact;
+                break;
             case "VT IP":
                 url = "https://www.virustotal.com/#/ip-address/"+artifact;
                 break;
@@ -606,6 +637,9 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
             case "TOR Domain":
                 url = "https://metrics.torproject.org/rs.html#search/"+artifact;
                 break;
+            case "URLhaus Domain":
+                url = "https://urlhaus.abuse.ch/browse.php?search="+artifact;
+                break;
             case "VT Domain":
                 url = "https://virustotal.com/#/domain/"+artifact;
                 break;
@@ -626,6 +660,9 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 break;
             case "ThreatMiner Hash":
                 url = "https://www.threatminer.org/sample.php?q="+artifact;
+                break;
+            case "URLhaus Hash":
+                url = "https://urlhaus.abuse.ch/browse.php?search="+artifact;
                 break;
             case "VT Hash":
                 url = "https://www.virustotal.com/#/file/"+artifact;
@@ -653,6 +690,9 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 break;
             case "urlscan":
                 url = "https://urlscan.io/";
+                break;
+            case "URLhaus URL":
+                url = "https://urlhaus.abuse.ch/browse.php?search="+artifact;
                 break;
             case "VT URL":
                 url = "https://www.virustotal.com/#/home/url";
