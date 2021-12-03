@@ -668,7 +668,7 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
                 url = "https://censys.io/ipv4/"+artifact;
                 break;
             case "FortiGuard IP":
-                url = "http://fortiguard.com/search?q="+artifact+"&engine=8";
+                url = "https://fortiguard.com/search?q="+artifact+"&engine=8";
                 break;
             case "GreyNoise IP":
                 url = "https://viz.greynoise.io/ip/"+artifact;
@@ -683,10 +683,10 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
                 url = "https://www.ipqualityscore.com/free-ip-lookup-proxy-vpn-test/lookup/"+artifact;
                 break;
             case "IPVoid IP":
-                url = "http://www.ipvoid.com/";
+                url = "https://www.ipvoid.com/";
                 break;
             case "MX Toolbox ARIN IP":
-                url = "http://www.mxtoolbox.com/SuperTool.aspx?action=arin%3a"+artifact;
+                url = "https://www.mxtoolbox.com/SuperTool.aspx?action=arin%3a"+artifact;
                 break;
             case "Pulsedive IP":
                 url = "https://pulsedive.com/indicator/?ioc="+window.btoa(artifact); // btoa() = base64 encode
@@ -728,16 +728,16 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
                 url = "https://www.alexa.com/siteinfo/"+artifact;
                 break;
             case "BlueCoat Domain":
-                url = "http://sitereview.bluecoat.com/#/lookup-result/"+artifact;
+                url = "https://sitereview.bluecoat.com/#/lookup-result/"+artifact;
                 break;
             case "Censys Domain":
                 url = "https://censys.io/domain?q="+artifact;
                 break;
             case "FortiGuard Domain":
-                url = "http://fortiguard.com/search?q="+artifact+"&engine=1";
+                url = "https://fortiguard.com/search?q="+artifact+"&engine=1";
                 break;
             case "host.io Domain":
-                url = "http://host.io/"+artifact;
+                url = "https://host.io/"+artifact;
                 break;
             case "MX Toolbox Domain":
                 url = "https://mxtoolbox.com/SuperTool.aspx?action=mx%3a"+artifact+"&run=toolpage";
@@ -806,10 +806,10 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
                 url = "https://app.any.run/";
                 break;
             case "BlueCoat URL":
-                url = "http://sitereview.bluecoat.com/#/lookup-result/";
+                url = "https://sitereview.bluecoat.com/#/lookup-result/";
                 break;
             case "FortiGuard URL":
-                url = "http://fortiguard.com/search?q="+artifact+"&engine=7";
+                url = "https://fortiguard.com/search?q="+artifact+"&engine=7";
                 break;
             case "HackerTarget":
                 url = "https://hackertarget.com/extract-links/";
@@ -833,7 +833,7 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
                 url = "https://zulu.zscaler.com/";
                 break;
     }
-    browser.tabs.create({url: url});
+    browser.tabs.create({url});
     // copy the selection to clipboard
     navigator.clipboard.writeText(artifact);
 });
