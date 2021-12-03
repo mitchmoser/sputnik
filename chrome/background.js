@@ -443,8 +443,9 @@ var artifact = "";
 /*
  * Source:
  * https://stackoverflow.com/questions/13899299/write-text-to-clipboard#18258178
+ * Note: Renamed function to match it's use case in Manifest V3
  */
-function copyStringToClipboard(str) {
+function injectCopyStringToClipboard(str) {
     // Create new element
     var el = document.createElement("textarea");
     // Set value (string to be copied)
@@ -459,7 +460,26 @@ function copyStringToClipboard(str) {
     document.execCommand("copy");
     // Remove temporary element
     document.body.removeChild(el);
-    }
+}
+
+/* 
+ * New function using chrome.scripting to inject the copyStringToClipboard into current active tab.
+ * This was the only "workaround" to having clipboards work in Manifest V3 since the Servcie Workers
+ * no longer have access to the DOM in V3, which breaks all the old functionality.
+ */
+function copyStringToClipboard(str) {
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        var currTab = tabs[0];
+        if (currTab) 
+        {
+            chrome.scripting.executeScript({
+                target: {tabId: currTab.id},
+                func: injectCopyStringToClipboard,
+                args: [str],
+            });
+        }
+    });
+}
 
 function sanitizeArtifact(artifact) {
     while(artifact.includes("[.]")) {
@@ -519,7 +539,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 url = "https://censys.io/ipv4/"+artifact;
                 break;
             case "FortiGuard IP":
-                url = "http://fortiguard.com/search?q="+artifact+"&engine=8";
+                url = "https://fortiguard.com/search?q="+artifact+"&engine=8";
                 break;
             case "GreyNoise IP":
                 url = "https://viz.greynoise.io/ip/"+artifact;
@@ -534,10 +554,10 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 url = "https://www.ipqualityscore.com/free-ip-lookup-proxy-vpn-test/lookup/"+artifact;
                 break;
             case "IPVoid IP":
-                url = "http://www.ipvoid.com/";
+                url = "https://www.ipvoid.com/";
                 break;
             case "MX Toolbox ARIN IP":
-                url = "http://www.mxtoolbox.com/SuperTool.aspx?action=arin%3a"+artifact;
+                url = "https://www.mxtoolbox.com/SuperTool.aspx?action=arin%3a"+artifact;
                 break;
             case "Pulsedive IP":
                 url = "https://pulsedive.com/indicator/?ioc="+window.btoa(artifact); // btoa() = base64 encode
@@ -579,13 +599,13 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 url = "https://www.alexa.com/siteinfo/"+artifact;
                 break;
             case "BlueCoat Domain":
-                url = "http://sitereview.bluecoat.com/#/lookup-result/"+artifact;
+                url = "https://sitereview.bluecoat.com/#/lookup-result/"+artifact;
                 break;
             case "Censys Domain":
                 url = "https://censys.io/domain?q="+artifact;
                 break;
             case "FortiGuard Domain":
-                url = "http://fortiguard.com/search?q="+artifact+"&engine=1";
+                url = "https://fortiguard.com/search?q="+artifact+"&engine=1";
                 break;
             case "host.io Domain":
                 url = "https://host.io/"+artifact;
@@ -657,10 +677,10 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 url = "https://app.any.run/";
                 break;
             case "BlueCoat URL":
-                url = "http://sitereview.bluecoat.com/#/lookup-result/";
+                url = "https://sitereview.bluecoat.com/#/lookup-result/";
                 break;
             case "FortiGuard URL":
-                url = "http://fortiguard.com/search?q="+artifact+"&engine=7";
+                url = "https://fortiguard.com/search?q="+artifact+"&engine=7";
                 break;
             case "HackerTarget":
                 url = "https://hackertarget.com/extract-links/";
@@ -684,5 +704,5 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 url = "https://zulu.zscaler.com/";
                 break;
     }
-    chrome.tabs.create({url: url});
+    chrome.tabs.create({url});
 });
