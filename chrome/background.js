@@ -479,7 +479,7 @@ function copyStringToClipboard(str) {
             });
         }
     });
-};
+}
 
 function sanitizeArtifact(artifact) {
     while(artifact.includes("[.]")) {
@@ -704,5 +704,5 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 url = "https://zulu.zscaler.com/";
                 break;
     }
-    chrome.tabs.create({url: url});
+    chrome.tabs.create({url});
 });
