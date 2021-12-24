@@ -13,10 +13,8 @@
     "permissions": [
         "contextMenus",
         "background",
-        "scripting",
-        "tabs"
+        "scripting"
     ],
     "host_permissions": [
-        "*://*/*"
     ]
 }

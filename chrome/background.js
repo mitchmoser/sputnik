@@ -560,7 +560,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 url = "https://www.mxtoolbox.com/SuperTool.aspx?action=arin%3a"+artifact;
                 break;
             case "Pulsedive IP":
-                url = "https://pulsedive.com/indicator/?ioc="+window.btoa(artifact); // btoa() = base64 encode
+                url = "https://pulsedive.com/indicator/?ioc="+btoa(artifact); // btoa() = base64 encode
                 break;
             case "SecurityTrails IP":
                 url = "https://securitytrails.com/list/ip/"+artifact;
@@ -614,7 +614,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 url = "https://mxtoolbox.com/SuperTool.aspx?action=mx%3a"+artifact+"&run=toolpage";
                 break;
             case "Pulsedive Domain":
-                url = "https://pulsedive.com/indicator/?ioc="+window.btoa(artifact); // btoa() = base64 encode
+                url = "https://pulsedive.com/indicator/?ioc="+btoa(artifact); // btoa() = base64 encode
                 break;
             case "SecurityTrails Domain":
                 url = "https://securitytrails.com/domain/"+artifact+"/dns";
