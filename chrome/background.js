@@ -8,7 +8,7 @@ chrome.contextMenus.create({
     "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
-browser.contextMenus.create({
+chrome.contextMenus.create({
     "id": "--All IP--",
     "title": "Open in all",
     "contexts": ["selection", "link", "image", "video", "audio"],
@@ -185,7 +185,7 @@ chrome.contextMenus.create({
     "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
-browser.contextMenus.create({
+chrome.contextMenus.create({
     "id": "--All Domain--",
     "title": "Open in all",
     "contexts": ["selection", "link", "image", "video", "audio"],
@@ -320,7 +320,7 @@ chrome.contextMenus.create({
     "contexts": ["selection"]
 });
 
-browser.contextMenus.create({
+chrome.contextMenus.create({
     "id": "--All Hash--",
     "title": "Open in all",
     "contexts": ["selection"],
@@ -385,7 +385,7 @@ chrome.contextMenus.create({
     "contexts": ["selection", "link", "image", "video", "audio"]
 });
 
-browser.contextMenus.create({
+chrome.contextMenus.create({
     "id": "--All URL--",
     "title": "Open in all",
     "contexts": ["selection", "link", "image", "video", "audio"],
@@ -610,7 +610,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 if (!fallthrough) break;
 
             case "Pulsedive IP":
-                urls.push("https://pulsedive.com/indicator/?ioc="+window.btoa(artifact)); // btoa() = base64 encode
+                urls.push("https://pulsedive.com/indicator/?ioc="+btoa(artifact)); // btoa() = base64 encode
                 if (!fallthrough) break;
 
             case "SecurityTrails IP":
@@ -685,7 +685,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 if (!fallthrough) break;
 
             case "Pulsedive Domain":
-                urls.push("https://pulsedive.com/indicator/?ioc="+window.btoa(artifact)); // btoa() = base64 encode
+                urls.push("https://pulsedive.com/indicator/?ioc="+btoa(artifact)); // btoa() = base64 encode
                 if (!fallthrough) break;
 
             case "SecurityTrails Domain":
@@ -813,6 +813,6 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
 
     // Open one or all tabs
     urls.forEach((url) => {
-        chrome.tabs.create({url: url});
+        chrome.tabs.create({url});
     });
 });
