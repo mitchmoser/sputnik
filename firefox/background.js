@@ -9,6 +9,13 @@ browser.contextMenus.create({
 });
 
 browser.contextMenus.create({
+    id: "--All IP--",
+    title: "Open in all",
+    contexts: ["selection", "link", "image", "video", "audio"],
+    parentId: "IP"
+});
+
+browser.contextMenus.create({
     id: "AbuseIPDB",
     title: "AbuseIPDB",
     contexts: ["selection", "link", "image", "video", "audio"],
@@ -248,6 +255,13 @@ browser.contextMenus.create({
 });
 
 browser.contextMenus.create({
+    id: "--All Domain--",
+    title: "Open in all",
+    contexts: ["selection", "link", "image", "video", "audio"],
+    parentId: "Domain"
+});
+
+browser.contextMenus.create({
     id: "Alexa Domain",
     title: "Alexa",
     contexts: ["selection", "link", "image", "video", "audio"],
@@ -427,6 +441,13 @@ browser.contextMenus.create({
 });
 
 browser.contextMenus.create({
+    id: "--All Hash--",
+    title: "Open in all",
+    contexts: ["selection"],
+    parentId: "Hash",
+});
+
+browser.contextMenus.create({
     id: "Alien Hash",
     title: "AlienVault OTX",
     contexts: ["selection"],
@@ -503,6 +524,13 @@ browser.contextMenus.create({
     id: "URL",
     title: "URL",
     contexts: ["selection", "link", "image", "video", "audio"]
+});
+
+browser.contextMenus.create({
+    id: "--All URL--",
+    title: "Open in all",
+    contexts: ["selection", "link", "image", "video", "audio"],
+    parentId: "URL"
 });
 
 browser.contextMenus.create({
@@ -606,10 +634,13 @@ browser.contextMenus.create({
 });
 
 // create empty url variable
-var url = "";
+var urls = [];
 
-//create empty artifact variable
+// create empty artifact variable
 var artifact = "";
+
+// Open all tabs flag variable
+var fallthrough = false
 
 function sanitizeArtifact(artifact) {
     while(artifact.includes("[.]")) {
@@ -647,193 +678,273 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
 
     // unsanitize artifact if it is secured against clicking
     artifact = sanitizeArtifact(artifact);
+    fallthrough = false;
+    urls = []
+    
 
     switch (info.menuItemId) {
+        
             /*
              * IPs
              */
+            case "--All IP--":
+                fallthrough = true;
+
             case "AbuseIPDB":
-                url = "https://www.abuseipdb.com/check/"+artifact;
-                break;
+                urls.push("https://www.abuseipdb.com/check/"+artifact);
+                if (!fallthrough) break;
+
             case "Alien IP":
-                url = "https://otx.alienvault.com/indicator/ip/"+artifact;
-                break;
+                urls.push("https://otx.alienvault.com/indicator/ip/"+artifact);
+                if (!fallthrough) break;
+
             case "ARIN IP":
-                url = "https://search.arin.net/rdap/?query="+artifact;
-                break;
+                urls.push("https://search.arin.net/rdap/?query="+artifact);
+                if (!fallthrough) break;
+
             case "Bad Packets IP":
-                url = "https://mirai.badpackets.net/?source_ip_address="+artifact;
-                break;
+                urls.push("https://mirai.badpackets.net/?source_ip_address="+artifact);
+                if (!fallthrough) break;
+
             case "Censys IP":
-                url = "https://censys.io/ipv4/"+artifact;
-                break;
+                urls.push("https://censys.io/ipv4/"+artifact);
+                if (!fallthrough) break;
+
             case "FortiGuard IP":
-                url = "https://fortiguard.com/search?q="+artifact+"&engine=8";
-                break;
+                urls.push("https://fortiguard.com/search?q="+artifact+"&engine=8");
+                if (!fallthrough) break;
+
             case "GreyNoise IP":
-                url = "https://viz.greynoise.io/ip/"+artifact;
-                break;
+                urls.push("https://viz.greynoise.io/ip/"+artifact);
+                if (!fallthrough) break;
+
             case "HackerTarget Reverse IP":
-                url = "https://api.hackertarget.com/reverseiplookup/?q="+artifact;
-                break;
+                urls.push("https://api.hackertarget.com/reverseiplookup/?q="+artifact);
+                if (!fallthrough) break;
+
             case "IPinfo IP":
-                url = "https://ipinfo.io/"+artifact;
-                break;
+                urls.push("https://ipinfo.io/"+artifact);
+                if (!fallthrough) break;
+
             case "IP Quality Score":
-                url = "https://www.ipqualityscore.com/free-ip-lookup-proxy-vpn-test/lookup/"+artifact;
-                break;
+                urls.push("https://www.ipqualityscore.com/free-ip-lookup-proxy-vpn-test/lookup/"+artifact);
+                if (!fallthrough) break;
+
             case "IPVoid IP":
-                url = "https://www.ipvoid.com/";
-                break;
+                urls.push("https://www.ipvoid.com/");
+                if (!fallthrough) break;
+
             case "MX Toolbox ARIN IP":
-                url = "https://www.mxtoolbox.com/SuperTool.aspx?action=arin%3a"+artifact;
-                break;
+                urls.push("https://www.mxtoolbox.com/SuperTool.aspx?action=arin%3a"+artifact);
+                if (!fallthrough) break;
+
             case "Pulsedive IP":
-                url = "https://pulsedive.com/indicator/?ioc="+window.btoa(artifact); // btoa() = base64 encode
-                break;
+                urls.push("https://pulsedive.com/indicator/?ioc="+window.btoa(artifact)); // btoa() = base64 encode
+                if (!fallthrough) break;
+
             case "SecurityTrails IP":
-                url = "https://securitytrails.com/list/ip/"+artifact;
-                break;
+                urls.push("https://securitytrails.com/list/ip/"+artifact);
+                if (!fallthrough) break;
+
             case "Shodan IP":
-                url = "https://www.shodan.io/host/"+artifact;
-                break;
+                urls.push("https://www.shodan.io/host/"+artifact);
+                if (!fallthrough) break;
+
             case "Spyse IP":
-                url = "https://spyse.com/target/ip/"+artifact;
-                break;
+                urls.push("https://spyse.com/target/ip/"+artifact);
+                if (!fallthrough) break;
+
             case "Talos IP":
-                url = "https://talosintelligence.com/reputation_center/lookup?search="+artifact;
-                break;
+                urls.push("https://talosintelligence.com/reputation_center/lookup?search="+artifact);
+                if (!fallthrough) break;
+
             case "ThreatCrowd IP":
-                url = "https://www.threatcrowd.org/pivot.php?data="+artifact;
-                break;
+                urls.push("https://www.threatcrowd.org/pivot.php?data="+artifact);
+                if (!fallthrough) break;
+
             case "ThreatMiner IP":
-                url = "https://www.threatminer.org/host.php?q="+artifact;
-                break;
+                urls.push("https://www.threatminer.org/host.php?q="+artifact);
+                if (!fallthrough) break;
+
             case "TOR IP":
-                url = "https://metrics.torproject.org/rs.html#search/"+artifact;
-                break;
+                urls.push("https://metrics.torproject.org/rs.html#search/"+artifact);
+                if (!fallthrough) break;
+
             case "URLhaus IP":
-                url = "https://urlhaus.abuse.ch/browse.php?search="+artifact;
-                break;
+                urls.push("https://urlhaus.abuse.ch/browse.php?search="+artifact);
+                if (!fallthrough) break;
+
             case "VT IP":
-                url = "https://www.virustotal.com/#/ip-address/"+artifact;
-                break;
+                urls.push("https://www.virustotal.com/#/ip-address/"+artifact);
+                if (!fallthrough) break;
+
             case "X-Force IP":
-                url = "https://exchange.xforce.ibmcloud.com/ip/"+artifact;
+                urls.push("https://exchange.xforce.ibmcloud.com/ip/"+artifact);
                 break;
+
             /*
              * Domains
              */
+
+            case "--All Domain--":
+                fallthrough = true;
+
             case "Alexa Domain":
-                url = "https://www.alexa.com/siteinfo/"+artifact;
-                break;
+                urls.push("https://www.alexa.com/siteinfo/"+artifact);
+                if (!fallthrough) break;
+
             case "BlueCoat Domain":
-                url = "https://sitereview.bluecoat.com/#/lookup-result/"+artifact;
-                break;
+                urls.push("https://sitereview.bluecoat.com/#/lookup-result/"+artifact);
+                if (!fallthrough) break;
+
             case "Censys Domain":
-                url = "https://censys.io/domain?q="+artifact;
-                break;
+                urls.push("https://censys.io/domain?q="+artifact);
+                if (!fallthrough) break;
+
             case "FortiGuard Domain":
-                url = "https://fortiguard.com/search?q="+artifact+"&engine=1";
-                break;
+                urls.push("https://fortiguard.com/search?q="+artifact+"&engine=1");
+                if (!fallthrough) break;
+
             case "host.io Domain":
-                url = "https://host.io/"+artifact;
-                break;
+                urls.push("https://host.io/"+artifact);
+                if (!fallthrough) break;
+
             case "MX Toolbox Domain":
-                url = "https://mxtoolbox.com/SuperTool.aspx?action=mx%3a"+artifact+"&run=toolpage";
-                break;
+                urls.push("https://mxtoolbox.com/SuperTool.aspx?action=mx%3a"+artifact+"&run=toolpage");
+                if (!fallthrough) break;
+
             case "Pulsedive Domain":
-                url = "https://pulsedive.com/indicator/?ioc="+window.btoa(artifact); // btoa() = base64 encode
-                break;
+                urls.push("https://pulsedive.com/indicator/?ioc="+window.btoa(artifact)); // btoa() = base64 encode
+                if (!fallthrough) break;
+
             case "SecurityTrails Domain":
-                url = "https://securitytrails.com/domain/"+artifact+"/dns";
-                break;
+                urls.push("https://securitytrails.com/domain/"+artifact+"/dns");
+                if (!fallthrough) break;
+
             case "Shodan Domain":
-                url = "https://www.shodan.io/search?query="+artifact;
-                break;
+                urls.push("https://www.shodan.io/search?query="+artifact);
+                if (!fallthrough) break;
+
             case "Spyse Domain":
-                url = "https://spyse.com/target/domain/"+artifact;
-                break;
+                urls.push("https://spyse.com/target/domain/"+artifact);
+                if (!fallthrough) break;
+
             case "Talos Domain":
-                url = "https://talosintelligence.com/reputation_center/lookup?search="+artifact;
-                break;
+                urls.push("https://talosintelligence.com/reputation_center/lookup?search="+artifact);
+                if (!fallthrough) break;
+
             case "ThreatCrowd Domain":
-                url = "https://www.threatcrowd.org/pivot.php?data="+artifact;
-                break;
+                urls.push("https://www.threatcrowd.org/pivot.php?data="+artifact);
+                if (!fallthrough) break;
+
             case "ThreatMiner Domain":
-                url = "https://www.threatminer.org/domain.php?q="+artifact;
-                break;
+                urls.push("https://www.threatminer.org/domain.php?q="+artifact);
+                if (!fallthrough) break;
+
             case "TOR Domain":
-                url = "https://metrics.torproject.org/rs.html#search/"+artifact;
-                break;
+                urls.push("https://metrics.torproject.org/rs.html#search/"+artifact);
+                if (!fallthrough) break;
+
             case "URLhaus Domain":
-                url = "https://urlhaus.abuse.ch/browse.php?search="+artifact;
-                break;
+                urls.push("https://urlhaus.abuse.ch/browse.php?search="+artifact);
+                if (!fallthrough) break;
+
             case "VT Domain":
-                url = "https://virustotal.com/#/domain/"+artifact;
-                break;
+                urls.push("https://virustotal.com/#/domain/"+artifact);
+                if (!fallthrough) break;
+
             case "X-Force Domain":
-                url = "https://exchange.xforce.ibmcloud.com/url/"+artifact;
+                urls.push("https://exchange.xforce.ibmcloud.com/url/"+artifact);
                 break;
+
             /*
              * Hashes
              */
+        
+            case "--All Hash--":
+                fallthrough = true;
+
             case "Alien Hash":
-                url = "https://otx.alienvault.com/indicator/file/"+artifact;
-                break;
+                urls.push("https://otx.alienvault.com/indicator/file/"+artifact);
+                if (!fallthrough) break;
+
             case "Hybrid Hash":
-                url = "https://www.hybrid-analysis.com/search?query="+artifact;
-                break;
+                urls.push("https://www.hybrid-analysis.com/search?query="+artifact);
+                if (!fallthrough) break;
+
             case "Talos Hash":
-                url = "https://talosintelligence.com/talos_file_reputation";
-                break;
+                urls.push("https://talosintelligence.com/talos_file_reputation");
+                if (!fallthrough) break;
+
             case "ThreatMiner Hash":
-                url = "https://www.threatminer.org/sample.php?q="+artifact;
-                break;
+                urls.push("https://www.threatminer.org/sample.php?q="+artifact);
+                if (!fallthrough) break;
+
             case "URLhaus Hash":
-                url = "https://urlhaus.abuse.ch/browse.php?search="+artifact;
-                break;
+                urls.push("https://urlhaus.abuse.ch/browse.php?search="+artifact);
+                if (!fallthrough) break;
+
             case "VT Hash":
-                url = "https://www.virustotal.com/#/file/"+artifact;
-                break;
+                urls.push("https://www.virustotal.com/#/file/"+artifact);
+                if (!fallthrough) break;
+
             case "X-Force Hash":
-                url = "https://exchange.xforce.ibmcloud.com/malware/"+artifact;
+                urls.push("https://exchange.xforce.ibmcloud.com/malware/"+artifact);
                 break;
+
             /*
              * URLs
              */
+
+            case "--All URL--":
+                fallthrough = true;
+
             case "Any.Run":
-                url = "https://app.any.run/";
-                break;
+                urls.push("https://app.any.run/");
+                if (!fallthrough) break;
+
             case "BlueCoat URL":
-                url = "https://sitereview.bluecoat.com/#/lookup-result/";
-                break;
+                urls.push("https://sitereview.bluecoat.com/#/lookup-result/");
+                if (!fallthrough) break;
+
             case "FortiGuard URL":
-                url = "https://fortiguard.com/search?q="+artifact+"&engine=7";
-                break;
+                urls.push("https://fortiguard.com/search?q="+artifact+"&engine=7");
+                if (!fallthrough) break;
+
             case "HackerTarget":
-                url = "https://hackertarget.com/extract-links/";
-                break;
+                urls.push("https://hackertarget.com/extract-links/");
+                if (!fallthrough) break;
+
             case "TrendMicro URL":
-                url = "https://global.sitesafety.trendmicro.com/";
-                break;
+                urls.push("https://global.sitesafety.trendmicro.com/");
+                if (!fallthrough) break;
+
             case "URLhaus URL":
-                url = "https://urlhaus.abuse.ch/browse.php?search="+artifact;
-                break;
+                urls.push("https://urlhaus.abuse.ch/browse.php?search="+artifact);
+                if (!fallthrough) break;
+
             case "urlscan":
-                url = "https://urlscan.io/";
-                break;
+                urls.push("https://urlscan.io/");
+                if (!fallthrough) break;
+
             case "VT URL":
-                url = "https://www.virustotal.com/#/home/url";
-                break;
+                urls.push("https://www.virustotal.com/#/home/url");
+                if (!fallthrough) break;
+
             case "X-Force URL":
-                url = "https://exchange.xforce.ibmcloud.com/url/"+artifact;
-                break;
+                urls.push("https://exchange.xforce.ibmcloud.com/url/"+artifact);
+                if (!fallthrough) break;
+
             case "zscaler":
-                url = "https://zulu.zscaler.com/";
+                urls.push("https://zulu.zscaler.com/");
                 break;
     }
-    browser.tabs.create({url});
+
+    // Open one or all tabs
+    urls.forEach((url) => {
+        browser.tabs.create({url: url});
+    })
+    
     // copy the selection to clipboard
     navigator.clipboard.writeText(artifact);
 });
