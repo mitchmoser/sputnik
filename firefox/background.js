@@ -604,6 +604,16 @@ browser.contextMenus.create({
 });
 
 browser.contextMenus.create({
+    id: "urlvoid",
+    title: "urlvoid",
+    contexts: ["selection", "link", "image", "video", "audio"],
+    parentId: "URL",
+    icons: {
+        "48": "icons/urlvoid_48.png"
+    }
+});
+
+browser.contextMenus.create({
     id: "VT URL",
     title: "VirusTotal",
     contexts: ["selection", "link", "image", "video", "audio"],
@@ -927,6 +937,10 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
                 urls.push("https://urlscan.io/");
                 if (!fallthrough) { break; }
 
+            case "urlvoid":
+                urls.push("https://urlvoid.com/search/"+artifact);
+                if (!fallthrough) { break; }
+    
             case "VT URL":
                 urls.push("https://www.virustotal.com/#/home/url");
                 if (!fallthrough) { break; }
