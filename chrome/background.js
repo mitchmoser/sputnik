@@ -435,6 +435,13 @@ chrome.contextMenus.create({
 });
 
 chrome.contextMenus.create({
+    "id": "urlvoid",
+    "title": "urlvoid",
+    "parentId": "URL",
+    "contexts": ["selection", "link", "image", "video", "audio"]
+});
+
+chrome.contextMenus.create({
     "id": "URLhaus URL",
     "title": "URLhaus",
     "parentId": "URL",
@@ -799,6 +806,10 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 urls.push("https://urlscan.io/");
                 if (!fallthrough) { break; }
 
+            case "urlvoid":
+                urls.push("https://urlvoid.com/scan/"+artifact);
+                if (!fallthrough) { break; }
+            
             case "VT URL":
                 urls.push("https://www.virustotal.com/#/home/url");
                 if (!fallthrough) { break; }
