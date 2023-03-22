@@ -146,6 +146,16 @@ browser.contextMenus.create({
 });
 
 browser.contextMenus.create({
+    id: "Scamalytics IP",
+    title: "Scamalytics",
+    contexts: ["selection", "link", "image", "video", "audio"],
+    parentId: "IP",
+    icons: {
+        "48": "icons/scamalytics_48.png"
+    }
+});
+
+browser.contextMenus.create({
     id: "SecurityTrails IP",
     title: "SecurityTrails",
     contexts: ["selection", "link", "image", "video", "audio"],
@@ -412,6 +422,16 @@ browser.contextMenus.create({
 });
 
 browser.contextMenus.create({
+    id: "URLVoid Domain",
+    title: "URLVoid",
+    contexts: ["selection", "link", "image", "video", "audio"],
+    parentId: "Domain",
+    icons: {
+        "48": "icons/urlvoid_48.png"
+    }
+});
+
+browser.contextMenus.create({
     id: "VT Domain",
     title: "VirusTotal",
     contexts: ["selection", "link", "image", "video", "audio"],
@@ -604,8 +624,8 @@ browser.contextMenus.create({
 });
 
 browser.contextMenus.create({
-    id: "urlvoid",
-    title: "urlvoid",
+    id: "URLVoid URL",
+    title: "URLVoid",
     contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "URL",
     icons: {
@@ -752,6 +772,10 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
                 urls.push("https://pulsedive.com/indicator/?ioc="+window.btoa(artifact)); // btoa() = base64 encode
                 if (!fallthrough) { break; }
 
+            case "Scamalytics IP":
+                urls.push("https://scamalytics.com/ip/"+artifact);
+                if (!fallthrough) { break; }
+
             case "SecurityTrails IP":
                 urls.push("https://securitytrails.com/list/ip/"+artifact);
                 if (!fallthrough) { break; }
@@ -859,6 +883,10 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
                 urls.push("https://urlhaus.abuse.ch/browse.php?search="+artifact);
                 if (!fallthrough) { break; }
 
+            case "URLVoid Domain":
+                urls.push("https://urlvoid.com/scan/"+artifact);
+                if (!fallthrough) { break; }
+    
             case "VT Domain":
                 urls.push("https://virustotal.com/#/domain/"+artifact);
                 if (!fallthrough) { break; }
@@ -937,7 +965,7 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
                 urls.push("https://urlscan.io/");
                 if (!fallthrough) { break; }
 
-            case "urlvoid":
+            case "URLVoid URL":
                 urls.push("https://urlvoid.com/scan/"+artifact);
                 if (!fallthrough) { break; }
     
