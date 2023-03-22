@@ -938,7 +938,7 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
                 if (!fallthrough) { break; }
 
             case "urlvoid":
-                urls.push("https://urlvoid.com/search/"+artifact);
+                urls.push("https://urlvoid.com/scan/"+artifact);
                 if (!fallthrough) { break; }
     
             case "VT URL":
