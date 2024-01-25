@@ -184,6 +184,29 @@ chrome.contextMenus.create({
 });
 
 /*
+* CVEs
+*/
+chrome.contextMenus.create({
+    "id": "CVE",
+    "title": "CVE",
+    "contexts": ["selection", "link", "image", "video", "audio"]
+});
+
+chrome.contextMenus.create({
+    "id": "--All CVE--",
+    "title": "Open in all",
+    "contexts": ["selection", "link", "image", "video", "audio"],
+    "parentId": "CVE"
+});
+
+chrome.contextMenus.create({
+    "id": "Exploit Prediction Scoring System - EPSS",
+    "title": "EPSS",
+    "parentId": "CVE",
+    "contexts": ["selection", "link", "image", "video", "audio"]
+});
+
+/*
  * Domains
  */
 chrome.contextMenus.create({
@@ -678,6 +701,17 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
             case "X-Force IP":
                 urls.push("https://exchange.xforce.ibmcloud.com/ip/"+artifact);
                 break;
+
+            /*
+             * CVEs
+             */
+
+            case "--All CVE--":
+                fallthrough = true;
+
+            case "Exploit Prediction Scoring System - EPSS":
+                urls.push("https://api.first.org/data/v1/epss?cve="+artifact+"&pretty=true");
+                if (!fallthrough) { break; }
 
             /*
              * Domains
