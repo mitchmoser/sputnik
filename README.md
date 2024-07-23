@@ -52,7 +52,7 @@ The following OSINT resources have been implemented for each artifact type:
   - [FortiGuard](http://fortiguard.com/)
   - [GreyNoise](https://greynoise.io/)
   - [HackerTarget](https://hackertarget.com/)
-  - [IPinfo](http://www.ipinfo.com/)
+  - [IPinfo](http://www.ipinfo.io/)
   - [IPVoid](http://www.ipvoid.com/)
   - [IP Quality Score](https://www.ipqualityscore.com/)
   - [MX Toolbox](https://mxtoolbox.com/)
