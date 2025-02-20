@@ -312,6 +312,13 @@ chrome.contextMenus.create({
 });
 
 chrome.contextMenus.create({
+    "id": "Unmask Domain",
+    "title": "Unmask Parasites",
+    "parentId": "Domain",
+    "contexts": ["selection", "link", "image", "video", "audio"]
+});
+
+chrome.contextMenus.create({
     "id": "VT Domain",
     "title": "VirusTotal",
     "parentId": "Domain",
@@ -458,6 +465,13 @@ chrome.contextMenus.create({
 chrome.contextMenus.create({
     "id": "URLhaus URL",
     "title": "URLhaus",
+    "parentId": "URL",
+    "contexts": ["selection", "link", "image", "video", "audio"]
+});
+
+chrome.contextMenus.create({
+    "id": "Unmask URL",
+    "title": "Unmask Parasites",
     "parentId": "URL",
     "contexts": ["selection", "link", "image", "video", "audio"]
 });
@@ -750,6 +764,10 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 urls.push("https://urlvoid.com/scan/"+artifact);
                 if (!fallthrough) { break; }
             
+            case "Unmask Domain":
+                urls.push("https://unmask.sucuri.net/security-report/?page="+artifact);
+                if (!fallthrough) { break; }
+
             case "VT Domain":
                 urls.push("https://virustotal.com/#/domain/"+artifact);
                 if (!fallthrough) { break; }
@@ -832,6 +850,10 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 urls.push("https://urlvoid.com/scan/"+artifact);
                 if (!fallthrough) { break; }
             
+            case "Unmask URL":
+                urls.push("https://unmask.sucuri.net/security-report/?page="+artifact);
+                if (!fallthrough) { break; }
+
             case "VT URL":
                 urls.push("https://www.virustotal.com/#/home/url");
                 if (!fallthrough) { break; }
