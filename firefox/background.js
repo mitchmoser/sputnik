@@ -433,7 +433,7 @@ browser.contextMenus.create({
 
 browser.contextMenus.create({
     id: "Unmask Domain",
-    title: "Unmas Parasites",
+    title: "Unmask Parasites",
     contexts: ["selection", "link", "image", "video", "audio"],
     parentId: "Domain",
     icons: {
