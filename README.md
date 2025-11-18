@@ -84,6 +84,7 @@ The following OSINT resources have been implemented for each artifact type:
   - [ThreatMiner](https://www.threatminer.org/)
   - [TOR Relay Search](https://metrics.torproject.org/rs.html#simple)
   - [URLhaus](https://urlhaus.abuse.ch/browse/)
+  - [Unmask Parasites](https://unmask.sucuri.net)
   - [VirusTotal](https://www.virustotal.com/#/home/upload)
   - [X-Force](https://exchange.xforce.ibmcloud.com/)
 
@@ -104,6 +105,7 @@ The following OSINT resources have been implemented for each artifact type:
   - [TrendMicro](https://global.sitesafety.trendmicro.com/)
   - [urlscan](https://urlscan.io/)
   - [URLhaus](https://urlhaus.abuse.ch/browse/)
+  - [Unmask Parasites](https://unmask.sucuri.net)
   - [VirusTotal](https://www.virustotal.com/#/home/upload)
   - [X-Force](https://exchange.xforce.ibmcloud.com/)
   - [Zscaler](https://zulu.zscaler.com/)
