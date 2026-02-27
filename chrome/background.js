@@ -86,6 +86,13 @@ chrome.contextMenus.create({
 });
 
 chrome.contextMenus.create({
+    "id": "IP.THC.ORG",
+    "title": "IP.THC.ORG Reverse DNS",
+    "parentId": "IP",
+    "contexts": ["selection", "link", "image", "video", "audio"]
+});
+
+chrome.contextMenus.create({
     "id": "IPVoid IP",
     "title": "IPVoid",
     "parentId": "IP",
@@ -230,6 +237,20 @@ chrome.contextMenus.create({
 chrome.contextMenus.create({
     "id": "host.io Domain",
     "title": "host.io",
+    "parentId": "Domain",
+    "contexts": ["selection", "link", "image", "video", "audio"]
+});
+
+chrome.contextMenus.create({
+    "id": "IP.THC.ORG Subdomain",
+    "title": "IP.THC.ORG Subdomain",
+    "parentId": "Domain",
+    "contexts": ["selection", "link", "image", "video", "audio"]
+});
+
+chrome.contextMenus.create({
+    "id": "IP.THC.ORG CNAME",
+    "title": "IP.THC.ORG CNAME",
     "parentId": "Domain",
     "contexts": ["selection", "link", "image", "video", "audio"]
 });
@@ -628,6 +649,9 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 urls.push("https://api.hackertarget.com/reverseiplookup/?q="+artifact);
                 if (!fallthrough) { break; }
 
+            case "IP.THC.ORG":
+                urls.push("https://ip.thc.org/#/result?type=RDNS&value="+artifact);
+                if (!fallthrough) { break; }                
 
             case "IPinfo IP":
                 urls.push("https://ipinfo.io/"+artifact);
@@ -719,6 +743,14 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
             case "host.io Domain":
                 urls.push("https://host.io/"+artifact);
                 if (!fallthrough) { break; }
+
+            case "IP.THC.ORG Subdomain":
+                urls.push("https://ip.thc.org/#/result?type=SUBD&value="+artifact);
+                if (!fallthrough) { break; }       
+
+            case "IP.THC.ORG CNAME":
+                urls.push("https://ip.thc.org/#/result?type=CNAME&value="+artifact);
+                if (!fallthrough) { break; }       
 
             case "MX Toolbox Domain":
                 urls.push("https://mxtoolbox.com/SuperTool.aspx?action=mx%3a"+artifact+"&run=toolpage");

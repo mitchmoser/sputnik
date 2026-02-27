@@ -116,6 +116,16 @@ browser.contextMenus.create({
 });
 
 browser.contextMenus.create({
+    id: "IP.THC.ORG",
+    title: "IP.THC.ORG Reverse DNS",
+    contexts: ["selection", "link", "image", "video", "audio"],
+    parentId: "IP",
+    icons: {
+        "48": "icons/ip.thc.org_48.png"
+    }
+});
+
+browser.contextMenus.create({
     id: "IPVoid IP",
     title: "IPVoid",
     contexts: ["selection", "link", "image", "video", "audio"],
@@ -318,6 +328,26 @@ browser.contextMenus.create({
     parentId: "Domain",
     icons: {
         "48": "icons/hostio_48.png"
+    }
+});
+
+browser.contextMenus.create({
+    id: "IP.THC.ORG Subdomain",
+    title: "IP.THC.ORG Subdomain",
+    contexts: ["selection", "link", "image", "video", "audio"],
+    parentId: "Domain",
+    icons: {
+        "48": "icons/ip.thc.org_48.png"
+    }
+});
+
+browser.contextMenus.create({
+    id: "IP.THC.ORG CNAME",
+    title: "IP.THC.ORG CNAME",
+    contexts: ["selection", "link", "image", "video", "audio"],
+    parentId: "Domain",
+    icons: {
+        "48": "icons/ip.thc.org_48.png"
     }
 });
 
@@ -772,6 +802,10 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
                 urls.push("https://api.hackertarget.com/reverseiplookup/?q="+artifact);
                 if (!fallthrough) { break; }
 
+            case "IP.THC.ORG":
+                urls.push("https://ip.thc.org/#/result?type=RDNS&value="+artifact);
+                if (!fallthrough) { break; }   
+                
             case "IPinfo IP":
                 urls.push("https://ipinfo.io/"+artifact);
                 if (!fallthrough) { break; }
@@ -862,6 +896,14 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
             case "host.io Domain":
                 urls.push("https://host.io/"+artifact);
                 if (!fallthrough) { break; }
+
+            case "IP.THC.ORG Subdomain":
+                urls.push("https://ip.thc.org/#/result?type=SUBD&value="+artifact);
+                if (!fallthrough) { break; }       
+
+            case "IP.THC.ORG CNAME":
+                urls.push("https://ip.thc.org/#/result?type=CNAME&value="+artifact);
+                if (!fallthrough) { break; }       
 
             case "MX Toolbox Domain":
                 urls.push("https://mxtoolbox.com/SuperTool.aspx?action=mx%3a"+artifact+"&run=toolpage");

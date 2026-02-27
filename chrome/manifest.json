@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Sputnik",
     "description": "OSINT web extension",
-    "version": "1.24",
+    "version": "1.25",
     "icons": {
         "48": "icons/logo_48.png",
         "128": "icons/logo_128.png"
